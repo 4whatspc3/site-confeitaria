@@ -1,0 +1,49 @@
+---
+const arrFAQ = [
+  {
+    id: 0,
+    title: "title",
+    details: "details",
+  },
+  {
+    id: 1,
+    title: "title",
+    details: "details",
+  },
+  {
+    id: 2,
+    title: "title",
+    details: "details",
+  },
+  {
+    id: 3,
+    title: "title",
+    details: "details",
+  },
+  {
+    id: 4,
+    title: "title",
+    details: "details",
+  },
+];
+---
+
+<section aria-label="faq-heading" role="region" class="min-h-screen">
+  <h2 id="faq-heading">FAQ</h2>
+  <p>Questões comuns...</p>
+  <section>
+    {
+      arrFAQ.map((item) => (
+        <div>
+          <h3>{item.title}</h3>
+          <p>{item.details}</p>
+          <div>
+            <button class="bg-cotton-candy p-2 rounded-3xl">
+              Lorem ipsum{item.id}
+            </button>
+          </div>
+        </div>
+      ))
+    }
+  </section>
+</section>
