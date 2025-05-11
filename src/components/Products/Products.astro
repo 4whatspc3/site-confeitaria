@@ -1,0 +1,84 @@
+---
+const arrCards = [
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+  {
+    id: 0,
+    title: "title",
+    source: "source",
+    alt: "alt",
+    details: "details",
+    price: "price",
+  },
+];
+---
+
+<section
+  aria-labelledby="products-heading"
+  role="region"
+  class="min-h-screen overflow-x-hidden"
+>
+  <h2>Lorem ipsum</h2>
+  <section class="flex min-w-screen overflow-x-auto gap-10">
+    {
+      arrCards.map((item) => (
+        <article class="product-card">
+          <header class="product-card__header">
+            <h2 class="product-card__title">{item.title}</h2>
+          </header>
+          <figure class="product-card__image">
+            <img src={item.source} alt={item.alt} />
+          </figure>
+          <section class="product-card__body">
+            <p class="product-card__description">{item.details}</p>
+            <p class="product-card__price">{item.price}</p>
+          </section>
+          <footer class="product-card__footer">
+            <button type="button">Comprar</button>
+          </footer>
+        </article>
+      ))
+    }
+  </section>
+  <div>
+    <button class="bg-cotton-candy p-2 rounded-3xl">Lorem ipsum</button>
+  </div>
+</section>
