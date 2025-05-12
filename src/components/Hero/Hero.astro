@@ -3,16 +3,38 @@
 ---
 
 <header class="bg-salomie min-h-screen p-4">
-  <nav class="flex justify-between items-center">
+  <nav
+    class="flex justify-between items-center bg-cotton-candy p-2 pr-6 pl-6 rounded-2xl"
+  >
     <div>
       <img src="src/assets/astro.svg" alt="logo" class="w-auto h-10" />
     </div>
-    <ul class="flex gap-4">
-      <li>Menu</li>
-      <li>Sobre</li>
-      <li>FAQ</li>
-      <li>Contato</li>
-    </ul>
+    <div class="relative">
+      <details>
+        <summary class="cursor-pointer [custom-summary]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="hover:stroke-morning-glory hover:scale-110 transition-all duration-300 ease-in-out"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </summary>
+        <ul
+          class="absolute bg-morning-glory rounded-2xl mt-6 p-4 -translate-x-10 flex flex-col gap-2"
+        >
+          <li><a href="#"> Menu </a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </details>
+    </div>
   </nav>
   <h1>Lorem ipsum</h1>
   <div>
@@ -25,3 +47,15 @@
     <img src="" alt="" />
   </div>
 </header>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
