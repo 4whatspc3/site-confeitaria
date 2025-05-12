@@ -2,51 +2,59 @@
 const arrCards = [
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Cheesecake de Morango",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
+    price: "R$ 18,99",
   },
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Bolo Red Velvet",
+    source:
+      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details:
+      "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
+    price: "R$ 34,99",
   },
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Éclair de Chocolate",
+    source: "src/assets/products-images/pexels-ron-lach-10117826.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details:
+      "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
+    price: "R$ 15,99",
   },
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Torta de Limão Merengue ",
+    source: "src/assets/products-images/pexels-lina-5732159.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details:
+      "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
+    price: "R$ 11,99",
   },
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Macaron de Framboesa ",
+    source:
+      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details:
+      "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
+    price: "R$ 7,89",
   },
   {
     id: 0,
-    title: "title",
-    source: "source",
+    title: "Brigadeiro Gourmet",
+    source:
+      "src/assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg",
     alt: "alt",
-    details: "details",
-    price: "price",
+    details:
+      "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
+    price: "R$ 4,99",
   },
 ];
 ---
@@ -54,31 +62,57 @@ const arrCards = [
 <section
   aria-labelledby="products-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-4 pr-0 bg-morning-glory"
 >
-  <h2 id="products-heading">Lorem ipsum</h2>
-  <section class="flex min-w-screen overflow-x-auto gap-10">
+  <h2 id="products-heading" class="text-5xl text-center">Lorem ipsum</h2>
+  <section class="flex overflow-x-auto gap-4 p-2">
     {
       arrCards.map((item) => (
-        <article class="product-card">
-          <header class="product-card__header">
-            <h2 class="product-card__title">{item.title}</h2>
-          </header>
-          <figure class="product-card__image">
-            <img src={item.source} alt={item.alt} />
+        <article class="flex flex-col gap-4 min-w-80 h-120 bg-outrageous-orange rounded-3xl p-4">
+          <figure class="self-center">
+            <img
+              src={item.source}
+              alt={item.alt}
+              class="object-cover w-70 h-70 rounded-3xl"
+            />
           </figure>
-          <section class="product-card__body">
-            <p class="product-card__description">{item.details}</p>
-            <p class="product-card__price">{item.price}</p>
+          <header>
+            <h2 class="font-extrabold text-xl text-left pl-2 text-salomie">
+              {item.title}
+            </h2>
+          </header>
+          <section>
+            <p class="font-medium text-left pl-2 pr-4 line-clamp-2 text-salomie">
+              {item.details}
+            </p>
           </section>
-          <footer class="product-card__footer">
-            <button type="button">Comprar</button>
+          <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+            <p class="font-bold text-salomie">{item.price}</p>
+            <button
+              type="button"
+              class="bg-salomie text-outrageous-orange rounded-2xl hover:scale-110"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 inline-block m-2 "
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
           </footer>
         </article>
       ))
     }
   </section>
-  <div>
-    <button class="bg-cotton-candy p-2 rounded-3xl">Lorem ipsum</button>
+  <div class="self-center">
+    <button class="font-medium bg-cotton-candy p-4 rounded-3xl"
+      >Veja mais</button
+    >
   </div>
 </section>
