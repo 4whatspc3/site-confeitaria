@@ -1,9 +1,43 @@
 ---
-import Ab01 from "../About/Ab01.astro";
-import Ab02 from "../About/Ab02.astro";
+
 ---
 
-<section aria-labelledby="about-heading" role="region">
-  <Ab01 />
-  <Ab02 />
+<section
+  aria-labelledby="about-heading"
+  role="region"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[4vh] p-4 bg-salomie"
+>
+  <h2 id="about-heading" class="text-5xl text-center">Sobre</h2>
+  <div>
+    <img
+      src="src/assets/about-images/pexels-shvets-production-7525227.jpg"
+      alt="Foto da Mary trabalhando"
+      class="object-cover w-full h-120 rounded-2xl"
+    />
+  </div>
+  <p class="text-center">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim labore ipsa,
+    veritatis dicta ipsam qui, sit harum aut quidem alias quia consequuntur,
+    exercitationem neque sapiente. Atque esse minima repellendus perferendis!
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+  </p>
+  <h3 class="text-4xl text-center">mais sobre...</h3>
+  <div>
+    <img
+      src="src/assets/about-images/pexels-shvets-production-7525187.jpg"
+      alt="ok"
+      class="object-cover object-top w-full h-80 rounded-2xl"
+    />
+  </div>
+  <p class="text-center">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo impedit
+    eum vel dignissimos architecto amet voluptatem culpa reiciendis.
+  </p>
+  <div>
+    <img
+      src="src/assets/about-images/pexels-shvets-production-7525188.jpg"
+      alt="ok"
+      class="object-cover w-full h-80 rounded-2xl"
+    />
+  </div>
 </section>
