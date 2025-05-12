@@ -1,20 +1,83 @@
 ---
+import Score from "./Score.astro";
 
+const arrCustomers = [
+  {
+    id: 0,
+    title: "Fernanda Robalo",
+    details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
+    userScore: 4,
+  },
+  {
+    id: 1,
+    title: "Mariana Dias",
+    details:
+      "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
+    userScore: 5,
+  },
+  {
+    id: 2,
+    title: "Segio Golçalvez",
+    details:
+      "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
+    userScore: 5,
+  },
+  {
+    id: 3,
+    title: "Lima Dias",
+    details:
+      "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
+    userScore: 4,
+  },
+  {
+    id: 4,
+    title: "Augusta Francista",
+    details:
+      "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
+    userScore: 4,
+  },
+  {
+    id: 5,
+    title: "Marta Nápolis",
+    details:
+      "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
+    userScore: 5,
+  },
+];
 ---
 
-<section aria-label="customers-heading" role="region" class="min-h-screen">
-  <h2 id="customers-heading">What customers say</h2>
-  <article>
-    <header>
-      <h2>cliente x...</h2>
-    </header>
-    <section>
-      <p>opinião...</p>
-    </section>
-    <footer>
-      <figure>
-        <img src="oi.jpg" alt="pontuação" />
-      </figure>
-    </footer>
-  </article>
+<section
+  aria-labelledby="customers-heading"
+  role="region"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[16vh] p-4 pr-0 bg-morning-glory"
+>
+  <h2 id="customers-heading" class="text-5xl text-center">
+    What <br />customers say
+  </h2>
+  <section class="flex overflow-x-auto gap-4 p-2">
+    {
+      arrCustomers.map((item) => (
+        <article class="flex flex-col gap-4 min-w-70 h-70 bg-cotton-candy rounded-3xl p-4 pt-10">
+          <header>
+            <h2 class="font-extrabold text-xl text-center text-outrageous-orange">
+              {item.title}
+            </h2>
+          </header>
+          <section>
+            <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-outrageous-orange">
+              {item.details}
+            </p>
+          </section>
+          <footer class="flex justify-center items-center">
+            <Score rating={item.userScore} />
+          </footer>
+        </article>
+      ))
+    }
+  </section>
+  <div class="self-center">
+    <button class="font-medium bg-outrageous-orange p-4 rounded-3xl"
+      >Veja mais</button
+    >
+  </div>
 </section>
