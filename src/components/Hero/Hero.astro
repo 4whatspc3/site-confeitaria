@@ -2,7 +2,9 @@
 
 ---
 
-<header class="bg-salomie min-h-screen p-4">
+<header
+  class="bg-salomie min-h-screen p-4 flex flex-col overflow-x-hidden gap-8"
+>
   <nav
     class="flex justify-between items-center bg-cotton-candy p-2 pr-6 pl-6 rounded-2xl"
   >
@@ -36,15 +38,21 @@
       </details>
     </div>
   </nav>
-  <h1>Lorem ipsum</h1>
-  <div>
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-    <div>
+  <h1 class="text-8xl">Lorem ipsum</h1>
+  <div class="order-2">
+    <h2 class="text-2xl text-slate-800">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </h2>
+    <div class="hidden">
       <button class="bg-cotton-candy p-2 rounded-3xl">Lorem ipsum</button>
     </div>
   </div>
-  <div>
-    <img src="" alt="" />
+  <div class="order-1 translate-x-20">
+    <img
+      src="src/assets/hero-images/a.jpg"
+      alt="doces"
+      class="object-cover rounded-3xl w-100 h-100 scale-x-[-1]"
+    />
   </div>
 </header>
 
