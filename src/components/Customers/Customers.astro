@@ -49,11 +49,11 @@ const arrCustomers = [
 <section
   aria-labelledby="customers-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden flex flex-col gap-[16vh] p-4 pr-0 bg-[#f2e6ff]"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[16vh] p-4 pl-1 pr-0 bg-[#f2e6ff]"
 >
   <h2
     id="customers-heading"
-    class="text-5xl text-center text-[#800040] font-comfortaa"
+    class="text-5xl text-center text-[#800040] font-medium"
   >
     What <br />customers say
   </h2>
@@ -85,3 +85,10 @@ const arrCustomers = [
     >
   </div>
 </section>
+
+<style>
+  section {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+</style>
