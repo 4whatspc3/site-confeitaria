@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 
 @theme {
   --color-cotton-candy:#ffb3d9;
@@ -7,4 +9,5 @@
   --color-morning-glory: #a4e5d8;
   --color-outrageous-orange: #ff6a3d;
   --color-new-gray: #4a4a4a;
+  --font-comfortaa: "Comfortaa", sans-serif;
 }
