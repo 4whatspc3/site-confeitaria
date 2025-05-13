@@ -1,45 +1,83 @@
 ---
 const arrFAQ = [
   {
-    id: 0,
-    title: "title",
-    details: "details",
+    id: "item-0",
+    title: "Todo o produto é caseiro?",
+    details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Eius nesciunt saepe vero deserunt, 
+              hic quod sequi corrupti incidunt explicabo quia cum.
+              Officiis itaque natus recusandae culpa nam quam dolorem ut.`,
   },
   {
-    id: 1,
-    title: "title",
-    details: "details",
+    id: "item-1",
+    title: "Que ingredientes você usa?",
+    details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Eius nesciunt saepe vero deserunt, 
+              hic quod sequi corrupti incidunt explicabo quia cum.
+              Officiis itaque natus recusandae culpa nam quam dolorem ut.`,
   },
   {
-    id: 2,
-    title: "title",
-    details: "details",
+    id: "item-2",
+    title: "Como funciona a entrega?",
+    details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Eius nesciunt saepe vero deserunt, 
+              hic quod sequi corrupti incidunt explicabo quia cum.
+              Officiis itaque natus recusandae culpa nam quam dolorem ut.`,
   },
   {
-    id: 3,
-    title: "title",
-    details: "details",
+    id: "item-3",
+    title: "Aceita encomendas para eventos?",
+    details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Eius nesciunt saepe vero deserunt, 
+              hic quod sequi corrupti incidunt explicabo quia cum.
+              Officiis itaque natus recusandae culpa nam quam dolorem ut.`,
   },
   {
-    id: 4,
-    title: "title",
-    details: "details",
+    id: "item-4",
+    title: "Como funciona o pagamento?",
+    details: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Eius nesciunt saepe vero deserunt, 
+              hic quod sequi corrupti incidunt explicabo quia cum.
+              Officiis itaque natus recusandae culpa nam quam dolorem ut.`,
   },
 ];
 ---
 
-<section aria-label="faq-heading" role="region" class="min-h-screen">
-  <h2 id="faq-heading">FAQ</h2>
-  <p>Questões comuns...</p>
-  <section>
+<section
+  aria-label="faq-heading"
+  role="region"
+  class="min-h-screen flex flex-col gap-[8vh] p-4 bg-salomie"
+>
+  <h2 id="faq-heading" class="text-5xl text-center">FAQ</h2>
+  <p class="text-center">Questões mais frequentes</p>
+  <section class="flex flex-col gap-[4vh]">
     {
       arrFAQ.map((item) => (
-        <div>
-          <h3>{item.title}</h3>
-          <p>{item.details}</p>
+        <div class="w-full flex items-center justify-between bg-morning-glory p-2 rounded-2xl">
+          <div class="flex flex-col gap-2">
+            <h3 class="text-base font-medium text-black">{item.title}</h3>
+            <p id={item.id} class="block paragraph-more hidden pr-4 ">
+              {item.details}
+            </p>
+          </div>
           <div>
-            <button class="bg-cotton-candy p-2 rounded-3xl">
-              Lorem ipsum{item.id}
+            <button
+              id={item.id}
+              type="button"
+              class="display-more bg-outrageous-orange text-morning-glory rounded-2xl hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 inline-block m-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
         </div>
@@ -47,3 +85,33 @@ const arrFAQ = [
     }
   </section>
 </section>
+
+<script>
+  function displayMore(el) {
+    const prg = document.querySelector(`#${el}.paragraph-more`);
+
+    prg.classList.toggle("hidden");
+  }
+
+  const btn = document.querySelectorAll(".display-more");
+
+  btn.forEach((item) =>
+    item.addEventListener("click", () => {
+      if (item.id === "item-0") {
+        displayMore(item.id);
+      }
+      if (item.id === "item-1") {
+        displayMore(item.id);
+      }
+      if (item.id === "item-2") {
+        displayMore(item.id);
+      }
+      if (item.id === "item-3") {
+        displayMore(item.id);
+      }
+      if (item.id === "item-4") {
+        displayMore(item.id);
+      }
+    })
+  );
+</script>
