@@ -49,22 +49,25 @@ const arrCustomers = [
 <section
   aria-labelledby="customers-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden flex flex-col gap-[16vh] p-4 pr-0 bg-morning-glory"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[16vh] p-4 pr-0 bg-[#f2e6ff]"
 >
-  <h2 id="customers-heading" class="text-5xl text-center">
+  <h2
+    id="customers-heading"
+    class="text-5xl text-center text-[#800040] font-comfortaa"
+  >
     What <br />customers say
   </h2>
   <section class="flex overflow-x-auto gap-4 p-2">
     {
       arrCustomers.map((item) => (
-        <article class="flex flex-col gap-4 min-w-70 h-70 bg-cotton-candy rounded-3xl p-4 pt-10">
+        <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm">
           <header>
-            <h2 class="font-extrabold text-xl text-center text-outrageous-orange">
+            <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa">
               {item.title}
             </h2>
           </header>
           <section>
-            <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-outrageous-orange">
+            <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito">
               {item.details}
             </p>
           </section>
@@ -76,7 +79,8 @@ const arrCustomers = [
     }
   </section>
   <div class="self-center">
-    <button class="font-medium bg-outrageous-orange p-4 rounded-3xl"
+    <button
+      class="font-medium bg-[#e60073] p-4 rounded-3xl text-[#ffffff] shadow-sm"
       >Veja mais</button
     >
   </div>
