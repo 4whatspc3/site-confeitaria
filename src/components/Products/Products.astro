@@ -62,13 +62,18 @@ const arrProducts = [
 <section
   aria-labelledby="products-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-4 pr-0 bg-morning-glory"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-4 pr-0 bg-[#e6f7ff]"
 >
-  <h2 id="products-heading" class="text-5xl text-center">Lorem ipsum</h2>
+  <h2
+    id="products-heading"
+    class="text-5xl text-center text-[#800040] font-comfortaa"
+  >
+    Lorem ipsum
+  </h2>
   <section class="flex overflow-x-auto gap-4 p-2">
     {
       arrProducts.map((item) => (
-        <article class="flex flex-col gap-4 min-w-80 h-120 bg-outrageous-orange rounded-3xl p-4">
+        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm">
           <figure class="self-center">
             <img
               src={item.source}
@@ -77,20 +82,20 @@ const arrProducts = [
             />
           </figure>
           <header>
-            <h2 class="font-extrabold text-xl text-left pl-2 text-salomie">
+            <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
               {item.title}
             </h2>
           </header>
           <section>
-            <p class="font-medium text-left pl-2 pr-4 line-clamp-2 text-salomie">
+            <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
               {item.details}
             </p>
           </section>
           <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
-            <p class="font-bold text-salomie">{item.price}</p>
+            <p class="font-bold text-[#d94694]">{item.price}</p>
             <button
               type="button"
-              class="bg-salomie text-outrageous-orange rounded-2xl hover:scale-110"
+              class="bg-[#ffebf2] border-1 border-[#ffdae9] text-[#d94694] rounded-2xl hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +116,8 @@ const arrProducts = [
     }
   </section>
   <div class="self-center">
-    <button class="font-medium bg-cotton-candy p-4 rounded-3xl"
+    <button
+      class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl"
       >Veja mais</button
     >
   </div>

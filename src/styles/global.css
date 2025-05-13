@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 
 
 @theme {
@@ -10,4 +12,40 @@
   --color-outrageous-orange: #ff6a3d;
   --color-new-gray: #4a4a4a;
   --font-comfortaa: "Comfortaa", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
 }
+
+/* Resumo da Paleta:
+
+Base: #ffb3d9
+
+Fundos de Seção:
+  #ffebf2 (Rosa Bem Claro)
+  #e6f7ff (Azul Céu Muito Claro)
+  #e6ffee (Verde Menta Muito Claro)
+  #fff5e6 (Pêssego Muito Claro)
+  #f2e6ff (Lavanda Muito Clara)
+  #ffffeb (Amarelo Baunilha Muito Claro)
+  #f7f7f7 (Cinza Muito Claro)
+  #ffeee6 (Damasco Claro)
+
+Títulos de Seção: 
+  #800040 (Magenta Escuro / Borgonha)
+
+Fundo dos Cards: 
+  #ffffff (Branco)
+
+Título nos Cards: 
+  #d94694 (Rosa Forte)
+
+Texto Longo nos Cards: 
+  #4d4d4d (Cinza Escuro)
+
+Fundo do Botão: 
+  #e60073 (Magenta Vibrante)
+
+Texto do Botão: 
+  #ffffff (Branco)
+
+Texto Geral (nas seções): 
+  #333333 (Cinza Bem Escuro) */
