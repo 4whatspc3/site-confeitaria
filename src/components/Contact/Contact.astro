@@ -2,21 +2,30 @@
 
 ---
 
-<footer class="min-h-[80vh] p-4 flex flex-col gap-8 bg-[#ffeee6]">
-  <section aria-labelledby="footer-contact" class="flex flex-col gap-8">
-    <h2
-      id="footer-contact"
-      class="text-5xl text-center text-[#800040] font-medium"
+<footer
+  aria-labelledby="footer-contact"
+  class="min-h-[80vh] p-4 flex flex-col gap-8 bg-[#ffeee6] sm:gap-12 sm:min-h-[70vh] md:min-h-[60vh]"
+>
+  <h2
+    id="footer-contact"
+    class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
+  >
+    Contato e Endereço
+  </h2>
+  <address
+    class="flex flex-col gap-4 not-italic bg-[#ffffff] p-4 rounded-2xl shadow-sm max-w-[500px] self-center md:flex-row md:max-w-[720px]"
+  >
+    <section
+      aria-labelledby="footer-address"
+      class="flex flex-col gap-4 md:w-1/2"
     >
-      Contato e Endereço
-    </h2>
-    <address
-      class="flex flex-col gap-4 not-italic bg-[#ffffff] p-4 rounded-2xl shadow-sm"
-    >
-      <p class="text-[#d94694] font-comfortaa font-semibold">
+      <h3
+        id="footer-address"
+        class="text-[#d94694] font-comfortaa font-semibold"
+      >
         Confeitaria Doce Sabor
-      </p>
-      <p class="text-[#4d4d4d] font-nunito font-medium">
+      </h3>
+      <p class="text-[#4d4d4d] font-nunito font-medium max-w-[80%]">
         Rua das Flores, 123 Bairro Jardim Encantado Cidade Exemplar, SP CEP:
         01234-567
       </p>
@@ -59,17 +68,18 @@
           >
         </li>
       </ul>
-    </address>
+    </section>
+
     <section
       aria-labelledby="footer-social"
-      class="flex flex-col gap-4 bg-[#ffffff] p-4 rounded-2xl shadow-sm"
+      class="flex flex-col gap-4 pt-4 md:pt-0"
     >
-      <h2
+      <h3
         id="footer-social"
         class="text-[#d94694] font-comfortaa font-semibold"
       >
         Redes Sociais
-      </h2>
+      </h3>
       <ul class="flex flex-col gap-2">
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
           <a
@@ -111,15 +121,17 @@
         </li>
       </ul>
     </section>
-  </section>
-  <div
-    class="footer-credits bg-[#ffffff] p-4 flex flex-col gap-2 rounded-2xl shadow-sm"
+  </address>
+  <section
+    class="footer-credits bg-[#ffffff] p-4 flex flex-col gap-4 rounded-2xl shadow-sm max-w-[500px] self-center md:min-w-[720px]"
   >
-    <p class="text-[#4d4d4d] font-comfortaa font-semibold">
+    <p class="text-[#4d4d4d] font-comfortaa font-semibold md:text-center">
       &copy; 2025 Confeitaria Doce Sabor. Todos os direitos reservados.
     </p>
-    <p class="italic text-[#4d4d4d] font-comfortaa font-semibold text-sm">
+    <p
+      class="italic text-[#4d4d4d] font-comfortaa font-semibold text-sm md:text-center"
+    >
       Site desenvolvido por empresa XYZ
     </p>
-  </div>
+  </section>
 </footer>
