@@ -3,7 +3,7 @@
 ---
 
 <header
-  class="bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-x-hidden gap-10"
+  class="bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-x-hidden gap-10 md:gap-12 overflow-y-hidden"
 >
   <nav
     class="flex justify-between items-center bg-cotton-candy p-2 pr-6 pl-6 rounded-2xl shadow-sm"
@@ -11,7 +11,13 @@
     <div>
       <img src="src/assets/astro.svg" alt="logo" class="w-auto h-10" />
     </div>
-    <div class="relative">
+    <ul class="hidden sm:flex text-[#000] font-medium gap-4">
+      <li><a href="#"> Menu </a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="relative sm:hidden">
       <details>
         <summary class="cursor-pointer [custom-summary]">
           <svg
@@ -38,22 +44,39 @@
       </details>
     </div>
   </nav>
-  <h1 class="text-8xl text-[#800040] font-comfortaa">Lorem ipsum</h1>
-  <div class="order-2">
-    <h2 class="text-2xl text-[#333333] font-comfortaa">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </h2>
-    <div class="hidden">
-      <button class="bg-cotton-candy p-2 rounded-3xl">Lorem ipsum</button>
+  <section class="flex flex-col gap-10 md:justify-between md:gap-12 lg:gap-10">
+    <h1
+      class="text-8xl text-[#800040] font-comfortaa md:text-center
+              lg:text-9xl"
+    >
+      Lorem <br class="md:hidden" />ipsum
+    </h1>
+    <div
+      class="order-2 md:order-0 md:self-center md:flex md:flex-col md:gap-6 lg:gap-8"
+    >
+      <h2
+        class="text-2xl text-[#333333] font-comfortaa max-w-[370px] md:text-center
+        lg:text-3xl lg:max-w-[420px]"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </h2>
+      <div class="hidden md:block md:text-center">
+        <button
+          class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm"
+          >Veja mais</button
+        >
+      </div>
     </div>
-  </div>
-  <div class="order-1 translate-x-20">
-    <img
-      src="src/assets/hero-images/a.jpg"
-      alt="doces"
-      class="object-cover rounded-3xl w-100 h-100 scale-x-[-1]"
-    />
-  </div>
+    <div
+      class="order-1 ml-auto translate-x-20 md:order-0 md:ml-0 md:translate-x-0 md:translate-y-20 md:self-center"
+    >
+      <img
+        src="src/assets/hero-images/a.jpg"
+        alt="doces"
+        class="object-cover rounded-3xl w-100 h-100 scale-x-[-1] md:w-130 md:h-130"
+      />
+    </div>
+  </section>
 </header>
 
 <style>
