@@ -1,0 +1,304 @@
+---
+const arrProducts = [
+  {
+    id: 0,
+    title: "Cheesecake de Morango",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
+    price: "R$ 18,99",
+  },
+  {
+    id: 1,
+    title: "Bolo Red Velvet",
+    source:
+      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
+    alt: "alt",
+    details:
+      "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
+    price: "R$ 34,99",
+  },
+  {
+    id: 2,
+    title: "Éclair de Chocolate",
+    source: "src/assets/products-images/pexels-ron-lach-10117826.jpg",
+    alt: "alt",
+    details:
+      "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
+    price: "R$ 15,99",
+  },
+  {
+    id: 3,
+    title: "Torta de Limão Merengue ",
+    source: "src/assets/products-images/pexels-lina-5732159.jpg",
+    alt: "alt",
+    details:
+      "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
+    price: "R$ 11,99",
+  },
+  {
+    id: 4,
+    title: "Macaron de Framboesa ",
+    source:
+      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
+    alt: "alt",
+    details:
+      "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
+    price: "R$ 7,89",
+  },
+  {
+    id: 5,
+    title: "Brigadeiro Gourmet",
+    source:
+      "src/assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg",
+    alt: "alt",
+    details:
+      "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
+    price: "R$ 4,99",
+  },
+];
+---
+
+<section
+  aria-labelledby="menu-heading"
+  role="region"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[8vh] p-4 pl-1 pr-0 bg-[#ffebf2] lg:gap-[8vh]"
+>
+  <header>
+    <h1
+      id="menu-heading"
+      class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
+    >
+      Lorem ipsum
+    </h1>
+  </header>
+  <main class="flex flex-col gap-8">
+    <div
+      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
+    >
+    </div>
+    <section class="seção-de-produtos flex flex-col gap-4">
+      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
+        Doces com chocolate
+      </h2>
+      <section
+        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+      >
+        {
+          arrProducts.map((item) => (
+            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+              <figure class="self-center">
+                <img
+                  src={item.source}
+                  alt={item.alt}
+                  class="object-cover w-70 h-70 rounded-3xl"
+                />
+              </figure>
+              <header>
+                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+                  {item.title}
+                </h2>
+              </header>
+              <section>
+                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
+                  {item.details}
+                </p>
+              </section>
+              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+                <p class="font-bold text-[#d94694]">{item.price}</p>
+                <section class="flex gap-6">
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
+                  >
+                    +
+                  </button>
+                </section>
+              </footer>
+            </article>
+          ))
+        }
+      </section>
+    </section>
+    <div
+      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
+    >
+    </div>
+    <section class="seção-de-produtos flex flex-col gap-4">
+      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
+        Doces veganos
+      </h2>
+      <section
+        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+      >
+        {
+          arrProducts.map((item) => (
+            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+              <figure class="self-center">
+                <img
+                  src={item.source}
+                  alt={item.alt}
+                  class="object-cover w-70 h-70 rounded-3xl"
+                />
+              </figure>
+              <header>
+                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+                  {item.title}
+                </h2>
+              </header>
+              <section>
+                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
+                  {item.details}
+                </p>
+              </section>
+              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+                <p class="font-bold text-[#d94694]">{item.price}</p>
+                <section class="flex gap-6">
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
+                  >
+                    +
+                  </button>
+                </section>
+              </footer>
+            </article>
+          ))
+        }
+      </section>
+    </section>
+    <div
+      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
+    >
+    </div>
+    <section class="seção-de-produtos flex flex-col gap-4">
+      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
+        Biscoitos
+      </h2>
+      <section
+        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+      >
+        {
+          arrProducts.map((item) => (
+            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+              <figure class="self-center">
+                <img
+                  src={item.source}
+                  alt={item.alt}
+                  class="object-cover w-70 h-70 rounded-3xl"
+                />
+              </figure>
+              <header>
+                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+                  {item.title}
+                </h2>
+              </header>
+              <section>
+                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
+                  {item.details}
+                </p>
+              </section>
+              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+                <p class="font-bold text-[#d94694]">{item.price}</p>
+                <section class="flex gap-6">
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
+                  >
+                    +
+                  </button>
+                </section>
+              </footer>
+            </article>
+          ))
+        }
+      </section>
+    </section>
+    <div
+      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
+    >
+    </div>
+    <section class="seção-de-produtos flex flex-col gap-4">
+      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
+        Especiais da casa
+      </h2>
+      <section
+        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+      >
+        {
+          arrProducts.map((item) => (
+            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+              <figure class="self-center">
+                <img
+                  src={item.source}
+                  alt={item.alt}
+                  class="object-cover w-70 h-70 rounded-3xl"
+                />
+              </figure>
+              <header>
+                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+                  {item.title}
+                </h2>
+              </header>
+              <section>
+                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
+                  {item.details}
+                </p>
+              </section>
+              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+                <p class="font-bold text-[#d94694]">{item.price}</p>
+                <section class="flex gap-6">
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
+                  >
+                    -
+                  </button>
+                  <button
+                    type="button"
+                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
+                  >
+                    +
+                  </button>
+                </section>
+              </footer>
+            </article>
+          ))
+        }
+      </section>
+    </section>
+  </main>
+  <footer class="self-center">
+    <div>
+      <button
+        class="font-semibold font-nunito bg-emerald-500 text-[#ffffff] p-4 rounded-3xl shadow-sm"
+        >Finalizar pedido</button
+      >
+    </div>
+  </footer>
+</section>
+
+<style>
+  section {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: thin;
+  }
+</style>
