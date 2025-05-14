@@ -5,21 +5,24 @@
 <section
   aria-labelledby="promo-heading"
   role="region"
-  class="min-h-[50vh] p-4 flex justify-center items-center bg-[#e6ffee]"
+  class="w-full min-h-[50vh] p-4 flex justify-center items-center bg-[#e6ffee]"
 >
   <article
-    class="flex rounded-2xl bg-morning-glory shadow-sm hover:scale-105 transition-transform duration-1000 ease-in-out"
+    class="flex rounded-2xl bg-morning-glory shadow-sm hover:scale-105 transition-transform duration-1000 ease-in-out w-full max-w-[420px]
+    sm:max-w-[520px] sm:h-[260px] md:max-w-[620px] md:h-[300px]"
   >
-    <section class="relative flex flex-col col-10 gap-6 p-4 w-full h-full">
+    <section
+      class="relative flex flex-col col-10 gap-6 p-4 w-full h-full sm:gap-8 md:gap-10"
+    >
       <header>
         <h2
           id="promo-heading"
-          class="font-extrabold text-md text-left text-[#333333] font-comfortaa"
+          class="font-extrabold text-md text-left text-[#333333] font-comfortaa md:text-xl sm:w-[80%]"
         >
           Donuts deliciosos esperando por você 😋
         </h2>
       </header>
-      <p class="text-sm pr-2 font-nunito text-[#4d4d4d]">
+      <p class="text-sm pr-2 font-nunito text-[#4d4d4d] sm:w-[80%] md:text-md">
         Desconto de 15% em compras de donuts de chocolate!
       </p>
       <footer>
@@ -34,7 +37,7 @@
       <img
         src="src/assets/promo-images/pexels-hannia-torres-348555462-14160765.jpg"
         alt="donuts"
-        class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl"
+        class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl sm:w-70 md:w-90"
       />
     </figure>
   </article>
