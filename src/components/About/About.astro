@@ -5,44 +5,59 @@
 <section
   aria-labelledby="about-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden flex flex-col gap-[4vh] p-4 bg-[#fff5e6]"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[4vh] p-4 bg-[#fff5e6] lg:gap-[6vh]"
 >
   <h2
     id="about-heading"
-    class="text-5xl text-center text-[#800040] font-medium"
+    class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
   >
     Sobre
   </h2>
-  <div>
-    <img
-      src="src/assets/about-images/pexels-shvets-production-7525227.jpg"
-      alt="Foto da Mary trabalhando"
-      class="object-cover w-full h-120 rounded-2xl shadow-sm"
-    />
+  <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-start">
+    <div class="self-center">
+      <img
+        src="src/assets/about-images/pexels-shvets-production-7525227.jpg"
+        alt="Foto da Mary trabalhando"
+        class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm
+            sm:w-100 sm:h-100 md:w-120 md:h-120"
+      />
+    </div>
+    <p
+      class="self-center text-center text-[#333333] font-nunito max-w-100 sm:max-w-120 md:max-w-140
+            lg:text-left lg:text-3xl lg:leading-10 lg:max-w-120"
+    >
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim labore
+      ipsa, veritatis dicta ipsam qui, sit harum aut quidem alias quia
+      consequuntur, exercitationem neque sapiente. Atque esse minima repellendus
+      perferendis! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    </p>
   </div>
-  <p class="text-center text-[#333333] font-nunito">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim labore ipsa,
-    veritatis dicta ipsam qui, sit harum aut quidem alias quia consequuntur,
-    exercitationem neque sapiente. Atque esse minima repellendus perferendis!
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-  </p>
-  <h3 class="text-4xl text-center text-[#800040] font-medium">mais sobre...</h3>
-  <div>
-    <img
-      src="src/assets/about-images/pexels-shvets-production-7525187.jpg"
-      alt="ok"
-      class="object-cover object-top w-full h-80 rounded-2xl shadow-sm"
-    />
+  <h3 class="text-4xl text-center text-[#800040] font-medium lg:text-5xl">
+    mais sobre...
+  </h3>
+  <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-end">
+    <div class="self-center lg:order-2">
+      <img
+        src="src/assets/about-images/pexels-shvets-production-7525187.jpg"
+        alt="ok"
+        class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm
+            sm:w-100 sm:h-100 md:w-120 md:h-120"
+      />
+    </div>
+    <p
+      class="self-center text-center text-[#333333] font-nunito max-w-100 sm:max-w-120
+      lg:text-right lg:text-3xl lg:leading-10 lg:max-w-120 lg:order-1"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo impedit
+      eum vel dignissimos architecto amet voluptatem culpa reiciendis.
+    </p>
   </div>
-  <p class="text-center text-[#333333] font-nunito">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo impedit
-    eum vel dignissimos architecto amet voluptatem culpa reiciendis.
-  </p>
-  <div>
+  <div class="self-center">
     <img
       src="src/assets/about-images/pexels-shvets-production-7525188.jpg"
       alt="ok"
-      class="object-cover w-full h-80 rounded-2xl shadow-sm"
+      class="object-cover object-center w-80 h-80 rounded-2xl shadow-sm
+            sm:w-100 sm:h-100 md:w-120 md:h-120"
     />
   </div>
 </section>
