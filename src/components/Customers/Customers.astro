@@ -53,30 +53,55 @@ const arrCustomers = [
 >
   <h2
     id="customers-heading"
-    class="text-5xl text-center text-[#800040] font-medium"
+    class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
   >
-    What <br />customers say
+    What <br class="md:hidden" />customers say
   </h2>
-  <section class="flex overflow-x-auto gap-4 p-2">
-    {
-      arrCustomers.map((item) => (
-        <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm">
-          <header>
-            <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa">
-              {item.title}
-            </h2>
-          </header>
-          <section>
-            <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito">
-              {item.details}
-            </p>
-          </section>
-          <footer class="flex justify-center items-center">
-            <Score rating={item.userScore} />
-          </footer>
-        </article>
-      ))
-    }
+  <section
+    class="stop-animation flex overflow-x-auto gap-4 p-2 md:max-w-[960px] md:overflow-x-hidden md:self-center md:gap-6"
+  >
+    <div class="show-animation obey-animation flex gap-4 md:gap-6">
+      {
+        arrCustomers.map((item) => (
+          <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
+            <header>
+              <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
+                {item.title}
+              </h2>
+            </header>
+            <section>
+              <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito ">
+                {item.details}
+              </p>
+            </section>
+            <footer class="flex justify-center items-center">
+              <Score rating={item.userScore} />
+            </footer>
+          </article>
+        ))
+      }
+    </div>
+    <div class="show-animation obey-animation flex gap-4 md:gap-6">
+      {
+        arrCustomers.map((item) => (
+          <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
+            <header>
+              <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
+                {item.title}
+              </h2>
+            </header>
+            <section>
+              <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito">
+                {item.details}
+              </p>
+            </section>
+            <footer class="flex justify-center items-center">
+              <Score rating={item.userScore} />
+            </footer>
+          </article>
+        ))
+      }
+    </div>
   </section>
   <div class="self-center">
     <button
@@ -90,5 +115,28 @@ const arrCustomers = [
   section {
     scrollbar-color: transparent transparent;
     scrollbar-width: thin;
+  }
+
+  @media (min-width: 768px) {
+    .show-animation {
+      animation: scroll 30s linear infinite;
+    }
+
+    .stop-animation:hover {
+      animation-play-state: paused;
+    }
+
+    .obey-animation {
+      animation-play-state: inherit;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 </style>
