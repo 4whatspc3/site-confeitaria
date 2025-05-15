@@ -1,4 +1,6 @@
 ---
+import NavMenu from "./NavMenu.astro";
+
 const arrProducts = [
   {
     id: 0,
@@ -64,7 +66,8 @@ const arrProducts = [
   role="region"
   class="min-h-screen overflow-x-hidden flex flex-col gap-[8vh] p-4 pl-1 pr-0 bg-[#ffebf2] lg:gap-[8vh]"
 >
-  <header>
+  <NavMenu />
+  <header class="pt-20 md:pt-0">
     <h1
       id="menu-heading"
       class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
