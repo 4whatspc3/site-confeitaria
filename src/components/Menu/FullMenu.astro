@@ -1,6 +1,8 @@
 ---
 import NavMenu from "./NavMenu.astro";
 
+import ItemsMenu from "./ItemsMenu.astro";
+
 const arrChocolate = [
   {
     id: "chc-00",
@@ -59,6 +61,171 @@ const arrChocolate = [
     price: "R$ 4,99",
   },
 ];
+
+const arrDocesVeganos = [
+  {
+    id: "veg-00",
+    title: "Brownie Vegano de Cacau",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Brownie vegano com toque de cacau e nozes, sem ingredientes derivados de animais.",
+    price: "R$ 12,50",
+  },
+  {
+    id: "veg-01",
+    title: "Mousse de Chocolate Vegano",
+    source:
+      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
+    alt: "alt",
+    details: "Mousse leve e aerado feito com abacate e cacau, sem laticínios.",
+    price: "R$ 14,99",
+  },
+  {
+    id: "veg-02",
+    title: "Cheesecake Vegano de Frutas Vermelhas",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Cheesecake cremoso com base de castanhas e compota de frutas vermelhas.",
+    price: "R$ 19,99",
+  },
+  {
+    id: "veg-03",
+    title: "Bolo de Cenoura Vegano",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Bolo úmido com cenoura e glacê de laranja, sem ovos ou leite.",
+    price: "R$ 16,50",
+  },
+  {
+    id: "veg-04",
+    title: "Torta de Limão Vegana",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Torta refrescante com creme de limão e base de biscoito integral vegano.",
+    price: "R$ 17,99",
+  },
+  {
+    id: "veg-05",
+    title: "Cookie Vegano de Chocolate",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Cookie macio com pedaços de chocolate meio amargo e aveia, totalmente vegano.",
+    price: "R$ 8,99",
+  },
+];
+
+const arrBiscoitos = [
+  {
+    id: "bisc-00",
+    title: "Biscoito de Chocolate e Amêndoas",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Biscoito crocante com pedaços de chocolate e amêndoas torradas.",
+    price: "R$ 6,99",
+  },
+  {
+    id: "bisc-01",
+    title: "Cookie de Gengibre",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Cookie aromático de gengibre com uma pitada de canela.",
+    price: "R$ 5,99",
+  },
+  {
+    id: "bisc-02",
+    title: "Biscoito de Aveia com Passas",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Biscoito tradicional com sabor reconfortante de aveia e passas.",
+    price: "R$ 4,99",
+  },
+  {
+    id: "bisc-03",
+    title: "Biscoito Integral de Linhaça",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Biscoito rico em fibras, feito com farinha integral e linhaça.",
+    price: "R$ 7,50",
+  },
+  {
+    id: "bisc-04",
+    title: "Biscoito de Limão Siciliano",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Biscoito refrescante com raspas e suco de limão siciliano.",
+    price: "R$ 6,50",
+  },
+  {
+    id: "bisc-05",
+    title: "Biscoito Recheado de Nutella",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details: "Biscoito macio recheado com creme de avelã e cacau.",
+    price: "R$ 8,50",
+  },
+];
+
+const arrEspeciaisDaCasa = [
+  {
+    id: "espc-00",
+    title: "Torta Caseira de Maçã",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Deliciosa torta de maçã com massa fina e recheio de maçã e canela.",
+    price: "R$ 15,99",
+  },
+  {
+    id: "espc-01",
+    title: "Pão de Queijo Especial",
+    source:
+      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
+    alt: "alt",
+    details:
+      "Pão de queijo quentinho, com textura perfeita, receita exclusiva da casa.",
+    price: "R$ 12,99",
+  },
+  {
+    id: "espc-02",
+    title: "Bolo de Fubá com Erva-doce",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Bolo tradicional com sabor marcante de fubá e erva-doce, autêntico da casa.",
+    price: "R$ 13,50",
+  },
+  {
+    id: "espc-03",
+    title: "Muffin de Blueberry",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Muffin macio com mirtilos frescos e toque de baunilha, feito na hora.",
+    price: "R$ 9,99",
+  },
+  {
+    id: "espc-04",
+    title: "Quindim Tradicional",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Doce tipicamente brasileiro com textura sedosa e sabor marcante de coco.",
+    price: "R$ 7,99",
+  },
+  {
+    id: "espc-05",
+    title: "Pudim de Leite Condensado",
+    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    alt: "alt",
+    details:
+      "Pudim cremoso de leite condensado com calda caramelizada, irresistível.",
+    price: "R$ 10,99",
+  },
+];
 ---
 
 <section
@@ -76,62 +243,10 @@ const arrChocolate = [
     </h1>
   </header>
   <main class="flex flex-col gap-8">
-    <div
-      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
-    >
-    </div>
-    <section class="seção-de-produtos flex flex-col gap-4">
-      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
-        Doces com chocolate
-      </h2>
-      <section
-        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
-      >
-        {
-          arrChocolate.map((item) => (
-            <article
-              id={item.id}
-              class="card-item flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80"
-            >
-              <figure class="self-center">
-                <img
-                  src={item.source}
-                  alt={item.alt}
-                  class="object-cover w-70 h-70 rounded-3xl"
-                />
-              </figure>
-              <header>
-                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
-                  {item.title}
-                </h2>
-              </header>
-              <section>
-                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
-                  {item.details}
-                </p>
-              </section>
-              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
-                <p class="font-bold text-[#d94694]">{item.price}</p>
-                <section class="flex gap-6">
-                  <button
-                    type="button"
-                    class="rmv-btn bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
-                  >
-                    -
-                  </button>
-                  <button
-                    type="button"
-                    class="add-btn bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
-                  >
-                    +
-                  </button>
-                </section>
-              </footer>
-            </article>
-          ))
-        }
-      </section>
-    </section>
+    <ItemsMenu sectionTitle="Doces de chocolate" arr={arrChocolate} />
+    <ItemsMenu sectionTitle="Doces Veganos" arr={arrDocesVeganos} />
+    <ItemsMenu sectionTitle="Biscoitos" arr={arrBiscoitos} />
+    <ItemsMenu sectionTitle="Especiais da Casa" arr={arrEspeciaisDaCasa} />
     <div
       class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
     >
