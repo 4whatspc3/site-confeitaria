@@ -55,11 +55,23 @@
           <span>Total:</span>
           <span id="valor-final">R$ 00,00</span>
         </div>
-        <button
-          class="mt-4 w-full bg-[#e60073] text-white py-2 rounded hover:bg-[#d50068] transition-colors duration-300"
-        >
-          Finalizar Compra
-        </button>
+        <div class="flex gap-2">
+          <button
+            class="mt-4 w-2/3 bg-emerald-500 text-white font-semibold py-2 rounded hover:bg-emerald-400 transition-colors duration-300"
+          >
+            Finalizar Compra
+          </button>
+          <button
+            id="clear-cart"
+            class="mt-4 w-1/3 bg-white text-white py-2 rounded hover:bg-red-200 transition-colors duration-300 flex items-center justify-center"
+          >
+            <img
+              src="src/assets/menu-icons/delete-trash-svgrepo-com.svg"
+              alt="trash can"
+              class="w-10 h-10"
+            />
+          </button>
+        </div>
       </section>
     </details>
   </div>
