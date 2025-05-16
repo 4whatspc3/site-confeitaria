@@ -5,16 +5,36 @@ import Forms from "../components/Forms/Forms.astro";
 
 <Layout title="Pedido">
   <section
+    id="order"
     aria-labelledby="order-heading"
     role="region"
-    class="min-h-screen w-full p-4 bg-[#e6f7ff] flex flex-col gap-[12vh]"
+    class="min-h-screen w-full p-4 bg-[#e6f7ff] flex flex-col gap-[10vh]"
   >
-    <h2
-      id="faq-heading"
-      class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
-    >
-      Conclua o pedido
-    </h2>
+    <div class="flex">
+      <a
+        href="/menu"
+        class="self-center bg-[#ffebf2] border border-[#ffdae9] text-[#d94694] rounded-2xl shadow-sm rotate-180 hover:scale-110 inline-block z-10 fixed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 m-2 inline-block"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+
+      <h2
+        id="order-heading"
+        class="text-5xl text-center text-[#800040] font-medium lg:text-6xl -translate-x-2"
+      >
+        Conclua o pedido
+      </h2>
+    </div>
 
     <h3
       class="self-center text-center text-[#333333] font-medium text-xl sm:w-[400px]"
