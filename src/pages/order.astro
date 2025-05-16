@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Forms from "../components/Forms/Forms.astro";
 ---
 
 <Layout title="Pedido">
   <section
     aria-labelledby="order-heading"
     role="region"
-    class="min-h-screen w-full p-4 bg-[#e6f7ff]"
+    class="min-h-screen w-full p-4 bg-[#e6f7ff] flex flex-col gap-[12vh]"
   >
     <h2
       id="faq-heading"
@@ -14,5 +15,18 @@ import Layout from "../layouts/Layout.astro";
     >
       Conclua o pedido
     </h2>
+
+    <h3
+      class="self-center text-center text-[#333333] font-medium text-xl sm:w-[400px]"
+    >
+      Após preencher o formulário, você será redirecionado para o <span
+        class="text-emerald-500">WhatsApp</span
+      >, onde poderá conversar diretamente com a <span class="text-[#d94694]"
+        >confeiteira</span
+      > 🤗
+    </h3>
+    <div>
+      <Forms />
+    </div>
   </section>
 </Layout>

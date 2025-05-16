@@ -1,0 +1,93 @@
+---
+
+---
+
+<form
+  id="orderForm"
+  class="flex flex-col gap-8 p-4 rounded-2xl bg-white shadow-md w-full sm:w-100 sm:justify-self-center md:w-120 lg:w-140"
+>
+  <div class="flex flex-col gap-2">
+    <label class="text-[#d94694] font-semibold" for="name">Nome:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Maria Oliveira"
+      class="border-1 border-[#ffdae9] p-2 rounded-2xl"
+      required
+    />
+  </div>
+  <div class="flex flex-col gap-2">
+    <label class="text-[#d94694] font-semibold" for="address">Endereço:</label>
+    <input
+      type="text"
+      id="address"
+      name="address"
+      placeholder="Rua João Dias, nº 4, Bairro Joaquim Dias"
+      class="border-1 border-[#ffdae9] p-2 rounded-2xl"
+      required
+    />
+  </div>
+  <div class="flex flex-col gap-2">
+    <label class="text-[#d94694] font-semibold" for="orderDetails"
+      >Detalhes do pedido:</label
+    >
+    <textarea
+      id="orderDetails"
+      name="orderDetails"
+      class="border-1 border-[#ffdae9] p-2 rounded-2xl"
+      rows="6"
+      readonly
+    >
+    </textarea>
+  </div>
+  <button
+    type="submit"
+    class="self-center w-60 font-semibold font-nunito bg-emerald-500 text-[#ffffff] p-4 rounded-3xl shadow-sm"
+    >Finalizar o pedido</button
+  >
+</form>
+
+<script>
+  // Array com os detalhes do pedido já preenchido.
+  // Substitua ou modifique os itens conforme necessário.
+  import { cart, carregarCarrinho, calcularTotal } from "../../lib/store.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    carregarCarrinho();
+
+    let total = calcularTotal();
+
+    const orderDetails = document.getElementById("orderDetails");
+
+    const details = cart
+      .map(
+        (item) =>
+          `${item.titulo} - R$ ${item.preco}\n - Qnt: ${item.quantidade}`
+      )
+      .join("\n"); // Junta todas as strings com quebras de linha
+
+    orderDetails.value = `${details}\n\nTotal: R$ ${total}`;
+  });
+
+  // Evento de submissão do formulário.
+  document
+    .getElementById("orderForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+      const orderDetails = document.getElementById("orderDetails").value;
+
+      // Monta a mensagem a ser enviada para o WhatsApp
+      const message = `Olá, tudo bem? Meu nome é: ${name}.\nAqui estão detalhes do meu pedido:\n${orderDetails}\nE esse é o meu endereço: ${address}.`;
+
+      // Substitua '559999999999' pelo número de telefone desejado no formato internacional (apenas dígitos)
+      const phoneNumber = "59888888888";
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+      // Redireciona para o WhatsApp com a mensagem pré-configurada
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+</script>
