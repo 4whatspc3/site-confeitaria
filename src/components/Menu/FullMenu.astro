@@ -1,9 +1,9 @@
 ---
 import NavMenu from "./NavMenu.astro";
 
-const arrProducts = [
+const arrChocolate = [
   {
-    id: 0,
+    id: "chc-00",
     title: "Cheesecake de Morango",
     source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
     alt: "alt",
@@ -11,7 +11,7 @@ const arrProducts = [
     price: "R$ 18,99",
   },
   {
-    id: 1,
+    id: "choc-01",
     title: "Bolo Red Velvet",
     source:
       "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
@@ -21,7 +21,7 @@ const arrProducts = [
     price: "R$ 34,99",
   },
   {
-    id: 2,
+    id: "choc-02",
     title: "Éclair de Chocolate",
     source: "src/assets/products-images/pexels-ron-lach-10117826.jpg",
     alt: "alt",
@@ -30,7 +30,7 @@ const arrProducts = [
     price: "R$ 15,99",
   },
   {
-    id: 3,
+    id: "choc-03",
     title: "Torta de Limão Merengue ",
     source: "src/assets/products-images/pexels-lina-5732159.jpg",
     alt: "alt",
@@ -39,7 +39,7 @@ const arrProducts = [
     price: "R$ 11,99",
   },
   {
-    id: 4,
+    id: "choc-04",
     title: "Macaron de Framboesa ",
     source:
       "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
@@ -49,7 +49,7 @@ const arrProducts = [
     price: "R$ 7,89",
   },
   {
-    id: 5,
+    id: "choc-05",
     title: "Brigadeiro Gourmet",
     source:
       "src/assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg",
@@ -88,8 +88,11 @@ const arrProducts = [
         class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
       >
         {
-          arrProducts.map((item) => (
-            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+          arrChocolate.map((item) => (
+            <article
+              id={item.id}
+              class="card-item flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80"
+            >
               <figure class="self-center">
                 <img
                   src={item.source}
@@ -112,13 +115,13 @@ const arrProducts = [
                 <section class="flex gap-6">
                   <button
                     type="button"
-                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
+                    class="rmv-btn bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
                   >
                     -
                   </button>
                   <button
                     type="button"
-                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
+                    class="add-btn bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
                   >
                     +
                   </button>
@@ -133,161 +136,6 @@ const arrProducts = [
       class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
     >
     </div>
-    <section class="seção-de-produtos flex flex-col gap-4">
-      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
-        Doces veganos
-      </h2>
-      <section
-        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
-      >
-        {
-          arrProducts.map((item) => (
-            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
-              <figure class="self-center">
-                <img
-                  src={item.source}
-                  alt={item.alt}
-                  class="object-cover w-70 h-70 rounded-3xl"
-                />
-              </figure>
-              <header>
-                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
-                  {item.title}
-                </h2>
-              </header>
-              <section>
-                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
-                  {item.details}
-                </p>
-              </section>
-              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
-                <p class="font-bold text-[#d94694]">{item.price}</p>
-                <section class="flex gap-6">
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
-                  >
-                    -
-                  </button>
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
-                  >
-                    +
-                  </button>
-                </section>
-              </footer>
-            </article>
-          ))
-        }
-      </section>
-    </section>
-    <div
-      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
-    >
-    </div>
-    <section class="seção-de-produtos flex flex-col gap-4">
-      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
-        Biscoitos
-      </h2>
-      <section
-        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
-      >
-        {
-          arrProducts.map((item) => (
-            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
-              <figure class="self-center">
-                <img
-                  src={item.source}
-                  alt={item.alt}
-                  class="object-cover w-70 h-70 rounded-3xl"
-                />
-              </figure>
-              <header>
-                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
-                  {item.title}
-                </h2>
-              </header>
-              <section>
-                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
-                  {item.details}
-                </p>
-              </section>
-              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
-                <p class="font-bold text-[#d94694]">{item.price}</p>
-                <section class="flex gap-6">
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
-                  >
-                    -
-                  </button>
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
-                  >
-                    +
-                  </button>
-                </section>
-              </footer>
-            </article>
-          ))
-        }
-      </section>
-    </section>
-    <div
-      class="w-full h-10 bg-[#ffebf2] border-1 border-[#ffdae9] rounded-3xl self-center lg:max-w-[1280px]"
-    >
-    </div>
-    <section class="seção-de-produtos flex flex-col gap-4">
-      <h2 class="text-3xl text-center text-[#d94694] font-medium lg:text-4xl">
-        Especiais da casa
-      </h2>
-      <section
-        class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
-      >
-        {
-          arrProducts.map((item) => (
-            <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
-              <figure class="self-center">
-                <img
-                  src={item.source}
-                  alt={item.alt}
-                  class="object-cover w-70 h-70 rounded-3xl"
-                />
-              </figure>
-              <header>
-                <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
-                  {item.title}
-                </h2>
-              </header>
-              <section>
-                <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
-                  {item.details}
-                </p>
-              </section>
-              <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
-                <p class="font-bold text-[#d94694]">{item.price}</p>
-                <section class="flex gap-6">
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-2xl hover:scale-110"
-                  >
-                    -
-                  </button>
-                  <button
-                    type="button"
-                    class="bg-[#ffebf2] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-2xl hover:scale-110"
-                  >
-                    +
-                  </button>
-                </section>
-              </footer>
-            </article>
-          ))
-        }
-      </section>
-    </section>
   </main>
   <footer class="self-center">
     <div>
@@ -305,3 +153,101 @@ const arrProducts = [
     scrollbar-width: thin;
   }
 </style>
+
+<script>
+  import { cart, calcularTotal, notifyCartChange } from "../../lib/store.js";
+
+  let total;
+
+  // Adiciona o listener aos botões de adicionar
+  document.querySelectorAll(".add-btn").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const card = e.target.closest(".card-item");
+      if (!card) return;
+      addToCart(card);
+    });
+  });
+
+  // Adiciona o listener aos botões de remover
+  document.querySelectorAll(".rmv-btn").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const card = e.target.closest(".card-item");
+      if (!card) return;
+      removeFromCart(card);
+    });
+  });
+
+  // Função para adicionar um produto ao array
+  function addToCart(card) {
+    const id = card.id;
+    const titulo = card.querySelector("header h2").textContent;
+    const precoTexto = card.querySelector("footer p").textContent;
+
+    const preco = parseFloat(
+      precoTexto
+        .replace("R$", "") // remove o símbolo de moeda
+        .trim() // remove os espaços laterais
+        .replace(/\./g, "") // remove pontos que podem ser separadores de milhar
+        .replace(",", ".") // converte a vírgula para ponto
+    );
+
+    // Busca se o produto já existe no carrinho
+    const produtoExistente = cart.find((produto) => produto.id === id);
+
+    if (produtoExistente) {
+      // Incrementa a quantidade
+      produtoExistente.quantidade++;
+      console.log(
+        `Incrementando quantidade de ${titulo} para ${produtoExistente.quantidade}`
+      );
+      console.log(cart);
+
+      total = calcularTotal();
+      console.log(total);
+
+      notifyCartChange();
+    } else {
+      // Cria um novo objeto com quantidade inicial 1 e adiciona ao carrinho
+      const novoProduto = { id, titulo, preco, quantidade: 1 };
+      cart.push(novoProduto);
+      console.log(`Produto adicionado: ${titulo}`);
+      console.log(cart);
+      total = calcularTotal();
+      console.log(total);
+
+      notifyCartChange();
+    }
+  }
+
+  // Função para remover um produto do array
+  function removeFromCart(card) {
+    const id = card.id;
+    const titulo = card.querySelector("header h2").textContent;
+
+    const index = cart.findIndex((produto) => produto.id === id);
+
+    if (index > -1) {
+      if (cart[index].quantidade > 1) {
+        // Diminui a quantidade se houver mais de um
+        cart[index].quantidade--;
+        console.log(
+          `Decrementando quantidade de ${titulo} para ${cart[index].quantidade}`
+        );
+        total = calcularTotal();
+        console.log(total);
+
+        notifyCartChange();
+      } else {
+        // Remove o produto se a quantidade for igual a 1
+        cart.splice(index, 1);
+        console.log(`Produto removido: ${titulo}`);
+        total = calcularTotal();
+        console.log(total);
+
+        notifyCartChange();
+      }
+    } else {
+      console.log(`Produto ${titulo} não encontrado no carrinho.`);
+    }
+  }
+</script>

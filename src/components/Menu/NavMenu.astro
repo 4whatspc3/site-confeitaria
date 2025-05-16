@@ -24,7 +24,7 @@
     </button>
   </div>
   <div class="relative">
-    <details>
+    <details class="relative">
       <summary class="cursor-pointer [custom-summary]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,14 +39,28 @@
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </summary>
-      <ul
-        class="absolute bg-cotton-candy text-[#800040] font-medium rounded-2xl mt-6 p-4 -translate-x-10 flex flex-col gap-2 shadow-sm"
+      <section
+        class="absolute -right-4 mt-6 w-70 bg-cotton-candy p-4 shadow-lg rounded-lg"
       >
-        <li><a href="#"> Menu </a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+        <h3 class="mb-4 text-xl font-semibold text-[#800040]">
+          Carrinho de Compras
+        </h3>
+        <ul
+          class="flex flex-col space-y-2 max-h-[230px] overflow-y-auto"
+          style="scrollbar-color: #e60073 transparent; scrollbar-width: thin;"
+        >
+          <!-- Os itens podem ser gerados dinamicamente -->
+        </ul>
+        <div class="mt-4 flex justify-between font-bold">
+          <span>Total:</span>
+          <span id="valor-final">R$ 00,00</span>
+        </div>
+        <button
+          class="mt-4 w-full bg-[#e60073] text-white py-2 rounded hover:bg-[#d50068] transition-colors duration-300"
+        >
+          Finalizar Compra
+        </button>
+      </section>
     </details>
   </div>
 </nav>
@@ -62,3 +76,35 @@
     margin: 0;
   }
 </style>
+
+<script>
+  import { cart, calcularTotal } from "../../lib/store.js";
+
+  function updateTotal() {
+    let total = calcularTotal();
+
+    const valorFinal = document.querySelector("#valor-final");
+
+    valorFinal.textContent = `R$ ${total}`;
+  }
+
+  function updateCart() {
+    const shopCart = document.querySelector("ul");
+
+    shopCart.replaceChildren();
+
+    cart.map((item) => {
+      const newItem = document.createElement("li");
+      newItem.textContent = `${item["titulo"]} - R$ ${item["preco"]} 
+      - Qnt: ${item["quantidade"]}`;
+      newItem.classList.add("p-2", "bg-white", "rounded", "shadow", "mr-2");
+      shopCart?.append(newItem);
+    });
+  }
+
+  document.addEventListener("cartChange", () => {
+    updateCart();
+
+    updateTotal();
+  });
+</script>
