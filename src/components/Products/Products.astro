@@ -75,7 +75,7 @@ const arrProducts = [
   >
     {
       arrProducts.map((item) => (
-        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80">
+        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80 mb-2">
           <figure class="self-center">
             <img
               src={item.source}
@@ -95,9 +95,10 @@ const arrProducts = [
           </section>
           <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
             <p class="font-bold text-[#d94694]">{item.price}</p>
-            <button
-              type="button"
-              class="bg-[#ffebf2] border-1 border-[#ffdae9] text-[#d94694] rounded-2xl hover:scale-110"
+            <a
+              href="/menu"
+              class="bg-[#ffebf2] border-1 border-[#ffdae9] text-[#d94694]
+              rounded-2xl hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -111,23 +112,24 @@ const arrProducts = [
                   clip-rule="evenodd"
                 />
               </svg>
-            </button>
+            </a>
           </footer>
         </article>
       ))
     }
   </section>
   <div class="self-center">
-    <button
-      class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm"
-      >Veja mais</button
+    <a
+      href="/menu"
+      class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm hover:bg-pink-500 transition-all duration-300 ease-in-out"
+      >Veja mais</a
     >
   </div>
 </section>
 
 <style>
   section {
-    scrollbar-color: transparent transparent;
+    scrollbar-color: #e60073 transparent;
     scrollbar-width: thin;
   }
 </style>
