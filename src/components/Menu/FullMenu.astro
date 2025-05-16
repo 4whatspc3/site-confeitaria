@@ -155,7 +155,7 @@ const arrChocolate = [
 </style>
 
 <script>
-  import { cart, calcularTotal, notifyCartChange } from "../../lib/store.js";
+  import { cart, salvarCarrinho, notifyCartChange } from "../../lib/store.js";
 
   let total;
 
@@ -165,6 +165,10 @@ const arrChocolate = [
       const card = e.target.closest(".card-item");
       if (!card) return;
       addToCart(card);
+
+      notifyCartChange();
+
+      salvarCarrinho();
     });
   });
 
@@ -174,6 +178,10 @@ const arrChocolate = [
       const card = e.target.closest(".card-item");
       if (!card) return;
       removeFromCart(card);
+
+      notifyCartChange();
+
+      salvarCarrinho();
     });
   });
 
@@ -201,21 +209,12 @@ const arrChocolate = [
         `Incrementando quantidade de ${titulo} para ${produtoExistente.quantidade}`
       );
       console.log(cart);
-
-      total = calcularTotal();
-      console.log(total);
-
-      notifyCartChange();
     } else {
       // Cria um novo objeto com quantidade inicial 1 e adiciona ao carrinho
       const novoProduto = { id, titulo, preco, quantidade: 1 };
       cart.push(novoProduto);
       console.log(`Produto adicionado: ${titulo}`);
       console.log(cart);
-      total = calcularTotal();
-      console.log(total);
-
-      notifyCartChange();
     }
   }
 
@@ -233,18 +232,10 @@ const arrChocolate = [
         console.log(
           `Decrementando quantidade de ${titulo} para ${cart[index].quantidade}`
         );
-        total = calcularTotal();
-        console.log(total);
-
-        notifyCartChange();
       } else {
         // Remove o produto se a quantidade for igual a 1
         cart.splice(index, 1);
         console.log(`Produto removido: ${titulo}`);
-        total = calcularTotal();
-        console.log(total);
-
-        notifyCartChange();
       }
     } else {
       console.log(`Produto ${titulo} não encontrado no carrinho.`);
