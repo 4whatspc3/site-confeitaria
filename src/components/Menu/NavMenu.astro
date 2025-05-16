@@ -90,10 +90,20 @@
 </style>
 
 <script>
-  import { cart, calcularTotal, carregarCarrinho } from "../../lib/store.js";
+  import {
+    cart,
+    calcularTotal,
+    carregarCarrinho,
+    salvarCarrinho,
+  } from "../../lib/store.js";
+  let total;
 
-  function updateTotal() {
-    let total = calcularTotal();
+  function updateTotal(operation) {
+    if (operation === "limpar") {
+      total = "0";
+    } else {
+      total = calcularTotal();
+    }
 
     const valorFinal = document.querySelector("#valor-final");
 
@@ -118,12 +128,26 @@
   document.addEventListener("DOMContentLoaded", () => {
     carregarCarrinho();
     updateCart(); // Função que atualiza a interface do carrinho
-    updateTotal();
+    updateTotal("incrementar");
   });
 
   document.addEventListener("cartChange", () => {
     updateCart();
 
-    updateTotal();
+    updateTotal("incrementar");
+  });
+
+  document.querySelector("#clear-cart")?.addEventListener("click", () => {
+    if (confirm("Você realmente quer limpar o carrinho?")) {
+      cart.length = 0;
+
+      updateCart();
+
+      updateTotal("limpar");
+
+      salvarCarrinho();
+    } else {
+      alert("Ação cancelada.");
+    }
   });
 </script>
