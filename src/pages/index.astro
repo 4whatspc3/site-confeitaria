@@ -20,4 +20,64 @@ import Contact from "../components/Contact/Contact.astro";
     <FAQ />
   </main>
   <Contact />
+  <a
+    id="myButton"
+    href="#home"
+    class="bg-[#ffebf2] border border-[#ffdae9] text-[#d94694] rounded-full -rotate-90 hover:scale-110 inline-block"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6 m-2 inline-block"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </a>
 </Layout>
+
+<style>
+  /* Estilizando o botão */
+  #myButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  /* Quando a classe "visible" estiver presente, o botão fica visível */
+  #myButton.visible {
+    opacity: 1;
+  }
+
+  /* Exemplo de seções com min-height igual ao viewport */
+  section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #section1 {
+    background-color: #f0f0f0;
+  }
+  #section2 {
+    background-color: #e0e0e0;
+  }
+</style>
+
+<script>
+  // Método simples utilizando a posição de scroll
+  window.addEventListener("scroll", function () {
+    const button = document.getElementById("myButton");
+    // Quando o scroll vertical for maior ou igual à altura do viewport,
+    // supomos que o usuário está na segunda seção.
+    if (window.scrollY >= window.innerHeight) {
+      button.classList.add("visible");
+    } else {
+      button.classList.remove("visible");
+    }
+  });
+</script>
