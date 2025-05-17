@@ -6,6 +6,12 @@
   id="orderForm"
   class="flex flex-col gap-8 p-4 rounded-2xl bg-white shadow-md w-full sm:w-100 sm:justify-self-center md:w-120 lg:w-140"
 >
+  <div
+    style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"
+  >
+    <label for="hp">Deixe este campo vazio</label>
+    <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off" />
+  </div>
   <div class="flex flex-col gap-2">
     <label class="text-[#d94694] font-semibold" for="name">Nome:</label>
     <input
@@ -56,8 +62,6 @@
 </style>
 
 <script>
-  // Array com os detalhes do pedido já preenchido.
-  // Substitua ou modifique os itens conforme necessário.
   import { cart, carregarCarrinho, calcularTotal } from "../../lib/store.js";
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -72,29 +76,31 @@
         (item) =>
           `${item.titulo} - R$ ${item.preco}\n - Qnt: ${item.quantidade}`
       )
-      .join("\n"); // Junta todas as strings com quebras de linha
+      .join("\n");
 
     orderDetails.value = `${details}\n\nTotal: R$ ${total}`;
   });
 
-  // Evento de submissão do formulário.
   document
     .getElementById("orderForm")
     .addEventListener("submit", function (event) {
       event.preventDefault();
 
+      const honeypot = document.getElementById("hp").value;
+      if (honeypot) {
+        console.log("Bot detectado. Envio bloqueado.");
+        return;
+      }
+
       const name = document.getElementById("name").value;
       const address = document.getElementById("address").value;
       const orderDetails = document.getElementById("orderDetails").value;
 
-      // Monta a mensagem a ser enviada para o WhatsApp
       const message = `Olá, tudo bem? Meu nome é: ${name}.\nAqui estão detalhes do meu pedido:\n${orderDetails}\nE esse é o meu endereço: ${address}.`;
 
-      // Substitua '559999999999' pelo número de telefone desejado no formato internacional (apenas dígitos)
       const phoneNumber = "59888888888";
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-      // Redireciona para o WhatsApp com a mensagem pré-configurada
       window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     });
 </script>

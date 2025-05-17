@@ -69,11 +69,8 @@ import Contact from "../components/Contact/Contact.astro";
 </style>
 
 <script>
-  // Método simples utilizando a posição de scroll
   window.addEventListener("scroll", function () {
     const button = document.getElementById("myButton");
-    // Quando o scroll vertical for maior ou igual à altura do viewport,
-    // supomos que o usuário está na segunda seção.
     if (window.scrollY >= window.innerHeight) {
       button.classList.add("visible");
     } else {

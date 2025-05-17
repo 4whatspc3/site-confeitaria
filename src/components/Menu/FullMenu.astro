@@ -275,7 +275,6 @@ const arrEspeciaisDaCasa = [
 
   let total;
 
-  // Adiciona o listener aos botões de adicionar
   document.querySelectorAll(".add-btn").forEach((button) => {
     button.addEventListener("click", (e) => {
       const card = e.target.closest(".card-item");
@@ -288,7 +287,6 @@ const arrEspeciaisDaCasa = [
     });
   });
 
-  // Adiciona o listener aos botões de remover
   document.querySelectorAll(".rmv-btn").forEach((button) => {
     button.addEventListener("click", (e) => {
       const card = e.target.closest(".card-item");
@@ -301,32 +299,24 @@ const arrEspeciaisDaCasa = [
     });
   });
 
-  // Função para adicionar um produto ao array
   function addToCart(card) {
     const id = card.id;
     const titulo = card.querySelector("header h2").textContent;
     const precoTexto = card.querySelector("footer p").textContent;
 
     const preco = parseFloat(
-      precoTexto
-        .replace("R$", "") // remove o símbolo de moeda
-        .trim() // remove os espaços laterais
-        .replace(/\./g, "") // remove pontos que podem ser separadores de milhar
-        .replace(",", ".") // converte a vírgula para ponto
+      precoTexto.replace("R$", "").trim().replace(/\./g, "").replace(",", ".")
     );
 
-    // Busca se o produto já existe no carrinho
     const produtoExistente = cart.find((produto) => produto.id === id);
 
     if (produtoExistente) {
-      // Incrementa a quantidade
       produtoExistente.quantidade++;
       console.log(
         `Incrementando quantidade de ${titulo} para ${produtoExistente.quantidade}`
       );
       console.log(cart);
     } else {
-      // Cria um novo objeto com quantidade inicial 1 e adiciona ao carrinho
       const novoProduto = { id, titulo, preco, quantidade: 1 };
       cart.push(novoProduto);
       console.log(`Produto adicionado: ${titulo}`);
@@ -334,7 +324,6 @@ const arrEspeciaisDaCasa = [
     }
   }
 
-  // Função para remover um produto do array
   function removeFromCart(card) {
     const id = card.id;
     const titulo = card.querySelector("header h2").textContent;
@@ -343,13 +332,11 @@ const arrEspeciaisDaCasa = [
 
     if (index > -1) {
       if (cart[index].quantidade > 1) {
-        // Diminui a quantidade se houver mais de um
         cart[index].quantidade--;
         console.log(
           `Decrementando quantidade de ${titulo} para ${cart[index].quantidade}`
         );
       } else {
-        // Remove o produto se a quantidade for igual a 1
         cart.splice(index, 1);
         console.log(`Produto removido: ${titulo}`);
       }
