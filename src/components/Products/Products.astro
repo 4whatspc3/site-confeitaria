@@ -1,9 +1,18 @@
 ---
+import { Image } from "astro:assets";
+
+import prod00 from "../../assets/products-images/pexels-suzyhazelwood-1126359.jpg";
+import prod01 from "../../assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg";
+import prod02 from "../../assets/products-images/pexels-ron-lach-10117826.jpg";
+import prod03 from "../../assets/products-images/pexels-lina-5732159.jpg";
+import prod04 from "../../assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg";
+import prod05 from "../../assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg";
+
 const arrProducts = [
   {
     id: 0,
     title: "Cheesecake de Morango",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod00,
     alt: "alt",
     details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
     price: "R$ 18,99",
@@ -11,8 +20,7 @@ const arrProducts = [
   {
     id: 1,
     title: "Bolo Red Velvet",
-    source:
-      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
+    source: prod01,
     alt: "alt",
     details:
       "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
@@ -21,7 +29,7 @@ const arrProducts = [
   {
     id: 2,
     title: "Éclair de Chocolate",
-    source: "src/assets/products-images/pexels-ron-lach-10117826.jpg",
+    source: prod02,
     alt: "alt",
     details:
       "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
@@ -30,7 +38,7 @@ const arrProducts = [
   {
     id: 3,
     title: "Torta de Limão Merengue ",
-    source: "src/assets/products-images/pexels-lina-5732159.jpg",
+    source: prod03,
     alt: "alt",
     details:
       "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
@@ -39,8 +47,7 @@ const arrProducts = [
   {
     id: 4,
     title: "Macaron de Framboesa ",
-    source:
-      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
+    source: prod04,
     alt: "alt",
     details:
       "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
@@ -49,8 +56,7 @@ const arrProducts = [
   {
     id: 5,
     title: "Brigadeiro Gourmet",
-    source:
-      "src/assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg",
+    source: prod05,
     alt: "alt",
     details:
       "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
@@ -77,10 +83,11 @@ const arrProducts = [
       arrProducts.map((item) => (
         <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80 mb-2">
           <figure class="self-center">
-            <img
+            <Image
               src={item.source}
               alt={item.alt}
               class="object-cover w-70 h-70 rounded-3xl"
+              format="avif"
             />
           </figure>
           <header>

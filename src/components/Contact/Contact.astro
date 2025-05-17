@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <footer
@@ -32,20 +32,24 @@
       </p>
       <ul class="flex flex-col gap-2">
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
-          <img
-            src="src/assets/contact-icons/phone-outline (1).svg"
+          <Image
+            src="/contact-icons/phone-outline (1).svg"
             alt="icone de um teleone"
             aria-hidden="true"
             class="w-6 md:w-8"
+            width={8}
+            height={8}
           />
           <a href="tel:+5511912345678">Telefone: (11) 91234-5678</a>
         </li>
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
-          <img
-            src="src/assets/contact-icons/email-outline (1).svg"
+          <Image
+            src="/contact-icons/email-outline (1).svg"
             alt="icone de um teleone"
             aria-hidden="true"
             class="w-6 md:w-8"
+            width={8}
+            height={8}
           />
           <a href="mailto:contato@docesabor.com.br">contato@docesabor.com.br</a>
         </li>
@@ -55,10 +59,12 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="src/assets/contact-icons/whatsapp-svgrepo-com.svg"
+            <Image
+              src="/contact-icons/whatsapp-svgrepo-com.svg"
               alt="icone do instagram"
               class="w-6 md:w-8 hover:scale-105"
+              width={8}
+              height={8}
             />
           </a>
           <a
@@ -88,10 +94,12 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="src/assets/contact-icons/instagram(1).svg"
+            <Image
+              src="/contact-icons/instagram(1).svg"
               alt="icone do instagram"
               class="w-6 md:w-8 hover:scale-105"
+              width={8}
+              height={8}
             />
           </a>
           <a
@@ -107,10 +115,12 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="src/assets/contact-icons/tiktok-svgrepo-com.svg"
+            <Image
+              src="/contact-icons/tiktok-svgrepo-com.svg"
               alt="icone do instagram"
               class="w-6 md:w-8 hover:scale-105"
+              width={8}
+              height={8}
             />
           </a>
           <a

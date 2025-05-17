@@ -1,5 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
+import navLogo from "../../assets/astro.svg";
+import heroImage from "../../assets/hero-images/a.jpg";
 ---
 
 <header
@@ -10,7 +12,7 @@
     class="flex justify-between items-center bg-cotton-candy p-2 pr-6 pl-6 rounded-2xl shadow-sm"
   >
     <div>
-      <img src="src/assets/astro.svg" alt="logo" class="w-auto h-10" />
+      <Image src={navLogo} alt="logo" class="w-auto h-10" />
     </div>
     <ul class="hidden sm:flex text-[#d94694] font-medium gap-4 lg:gap-8">
       <li
@@ -113,10 +115,11 @@
     <div
       class="order-1 ml-auto translate-x-20 md:order-0 md:ml-0 md:translate-x-0 md:translate-y-20 md:self-center"
     >
-      <img
-        src="src/assets/hero-images/a.jpg"
+      <Image
+        src={heroImage}
         alt="doces"
         class="object-cover rounded-3xl w-100 h-100 scale-x-[-1] md:w-130 md:h-130"
+        format="avif"
       />
     </div>
   </section>
