@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 const { sectionTitle, arr } = Astro.props;
 ---
 
@@ -20,10 +22,11 @@ const { sectionTitle, arr } = Astro.props;
           class="card-item flex flex-col gap-4 min-w-80 h-130 bg-[#ffffff] rounded-3xl p-4 mb-2 shadow-sm lg:max-w-80"
         >
           <figure class="self-center">
-            <img
+            <Image
               src={item.source}
               alt={item.alt}
               class="object-cover w-70 h-70 rounded-3xl"
+              format="avif"
             />
           </figure>
           <header>

@@ -3,11 +3,18 @@ import NavMenu from "./NavMenu.astro";
 
 import ItemsMenu from "./ItemsMenu.astro";
 
+import prod00 from "../../assets/products-images/pexels-suzyhazelwood-1126359.jpg";
+import prod01 from "../../assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg";
+import prod02 from "../../assets/products-images/pexels-ron-lach-10117826.jpg";
+import prod03 from "../../assets/products-images/pexels-lina-5732159.jpg";
+import prod04 from "../../assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg";
+import prod05 from "../../assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg";
+
 const arrChocolate = [
   {
     id: "chc-00",
     title: "Cheesecake de Morango",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod00,
     alt: "alt",
     details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
     price: "R$ 18,99",
@@ -15,8 +22,7 @@ const arrChocolate = [
   {
     id: "choc-01",
     title: "Bolo Red Velvet",
-    source:
-      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
+    source: prod01,
     alt: "alt",
     details:
       "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
@@ -25,7 +31,7 @@ const arrChocolate = [
   {
     id: "choc-02",
     title: "Éclair de Chocolate",
-    source: "src/assets/products-images/pexels-ron-lach-10117826.jpg",
+    source: prod02,
     alt: "alt",
     details:
       "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
@@ -33,8 +39,8 @@ const arrChocolate = [
   },
   {
     id: "choc-03",
-    title: "Torta de Limão Merengue ",
-    source: "src/assets/products-images/pexels-lina-5732159.jpg",
+    title: "Torta de Limão Merengue",
+    source: prod03,
     alt: "alt",
     details:
       "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
@@ -42,9 +48,8 @@ const arrChocolate = [
   },
   {
     id: "choc-04",
-    title: "Macaron de Framboesa ",
-    source:
-      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
+    title: "Macaron de Framboesa",
+    source: prod04,
     alt: "alt",
     details:
       "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
@@ -53,8 +58,7 @@ const arrChocolate = [
   {
     id: "choc-05",
     title: "Brigadeiro Gourmet",
-    source:
-      "src/assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg",
+    source: prod05,
     alt: "alt",
     details:
       "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
@@ -66,7 +70,7 @@ const arrDocesVeganos = [
   {
     id: "veg-00",
     title: "Brownie Vegano de Cacau",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod00,
     alt: "alt",
     details:
       "Brownie vegano com toque de cacau e nozes, sem ingredientes derivados de animais.",
@@ -75,8 +79,7 @@ const arrDocesVeganos = [
   {
     id: "veg-01",
     title: "Mousse de Chocolate Vegano",
-    source:
-      "src/assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg",
+    source: prod01,
     alt: "alt",
     details: "Mousse leve e aerado feito com abacate e cacau, sem laticínios.",
     price: "R$ 14,99",
@@ -84,7 +87,7 @@ const arrDocesVeganos = [
   {
     id: "veg-02",
     title: "Cheesecake Vegano de Frutas Vermelhas",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod02,
     alt: "alt",
     details:
       "Cheesecake cremoso com base de castanhas e compota de frutas vermelhas.",
@@ -93,7 +96,7 @@ const arrDocesVeganos = [
   {
     id: "veg-03",
     title: "Bolo de Cenoura Vegano",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod03,
     alt: "alt",
     details: "Bolo úmido com cenoura e glacê de laranja, sem ovos ou leite.",
     price: "R$ 16,50",
@@ -101,7 +104,7 @@ const arrDocesVeganos = [
   {
     id: "veg-04",
     title: "Torta de Limão Vegana",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod04,
     alt: "alt",
     details:
       "Torta refrescante com creme de limão e base de biscoito integral vegano.",
@@ -110,7 +113,7 @@ const arrDocesVeganos = [
   {
     id: "veg-05",
     title: "Cookie Vegano de Chocolate",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod05,
     alt: "alt",
     details:
       "Cookie macio com pedaços de chocolate meio amargo e aveia, totalmente vegano.",
@@ -122,7 +125,7 @@ const arrBiscoitos = [
   {
     id: "bisc-00",
     title: "Biscoito de Chocolate e Amêndoas",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod00,
     alt: "alt",
     details: "Biscoito crocante com pedaços de chocolate e amêndoas torradas.",
     price: "R$ 6,99",
@@ -130,7 +133,7 @@ const arrBiscoitos = [
   {
     id: "bisc-01",
     title: "Cookie de Gengibre",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod01,
     alt: "alt",
     details: "Cookie aromático de gengibre com uma pitada de canela.",
     price: "R$ 5,99",
@@ -138,7 +141,7 @@ const arrBiscoitos = [
   {
     id: "bisc-02",
     title: "Biscoito de Aveia com Passas",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod02,
     alt: "alt",
     details: "Biscoito tradicional com sabor reconfortante de aveia e passas.",
     price: "R$ 4,99",
@@ -146,7 +149,7 @@ const arrBiscoitos = [
   {
     id: "bisc-03",
     title: "Biscoito Integral de Linhaça",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod03,
     alt: "alt",
     details: "Biscoito rico em fibras, feito com farinha integral e linhaça.",
     price: "R$ 7,50",
@@ -154,7 +157,7 @@ const arrBiscoitos = [
   {
     id: "bisc-04",
     title: "Biscoito de Limão Siciliano",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod04,
     alt: "alt",
     details: "Biscoito refrescante com raspas e suco de limão siciliano.",
     price: "R$ 6,50",
@@ -162,7 +165,7 @@ const arrBiscoitos = [
   {
     id: "bisc-05",
     title: "Biscoito Recheado de Nutella",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod05,
     alt: "alt",
     details: "Biscoito macio recheado com creme de avelã e cacau.",
     price: "R$ 8,50",
@@ -173,7 +176,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-00",
     title: "Torta Caseira de Maçã",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod00,
     alt: "alt",
     details:
       "Deliciosa torta de maçã com massa fina e recheio de maçã e canela.",
@@ -182,8 +185,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-01",
     title: "Pão de Queijo Especial",
-    source:
-      "src/assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg",
+    source: prod01,
     alt: "alt",
     details:
       "Pão de queijo quentinho, com textura perfeita, receita exclusiva da casa.",
@@ -192,7 +194,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-02",
     title: "Bolo de Fubá com Erva-doce",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod02,
     alt: "alt",
     details:
       "Bolo tradicional com sabor marcante de fubá e erva-doce, autêntico da casa.",
@@ -201,7 +203,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-03",
     title: "Muffin de Blueberry",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod03,
     alt: "alt",
     details:
       "Muffin macio com mirtilos frescos e toque de baunilha, feito na hora.",
@@ -210,7 +212,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-04",
     title: "Quindim Tradicional",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod04,
     alt: "alt",
     details:
       "Doce tipicamente brasileiro com textura sedosa e sabor marcante de coco.",
@@ -219,7 +221,7 @@ const arrEspeciaisDaCasa = [
   {
     id: "espc-05",
     title: "Pudim de Leite Condensado",
-    source: "src/assets/products-images/pexels-suzyhazelwood-1126359.jpg",
+    source: prod05,
     alt: "alt",
     details:
       "Pudim cremoso de leite condensado com calda caramelizada, irresistível.",
