@@ -6,16 +6,18 @@ import heroImage from "../../assets/hero-images/kawaii.png";
 
 <header
   id="home"
-  class="bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] magicpattern bg-cover"
+  class="magicpattern bg-cover bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh]"
 >
   <nav
-    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-0"
+    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-0 2xl:w-[1440px] 2xl:mx-auto shake-nav"
   >
-    <div class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl">
+    <div
+      class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:shadow-sm"
+    >
       <Image src={navLogo} alt="logo" class="w-auto h-10" />
     </div>
     <ul
-      class="hidden sm:flex text-[#d94694] font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl"
+      class="hidden sm:flex text-new-pink font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:shadow-sm"
     >
       <li
         class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
@@ -91,31 +93,38 @@ import heroImage from "../../assets/hero-images/kawaii.png";
       </details>
     </div>
   </nav>
-  <section class="flex flex-col gap-[6vh] md:justify-between">
+  <section
+    class="flex flex-col gap-[6vh] md:justify-between xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-0"
+  >
     <h1
       class="text-8xl text-new-pink font-bold text-center
-              lg:text-9xl"
+              lg:text-9xl xl:text-8xl xl:col-start-1 xl:col-end-2
+              xl:row-start-1 xl:row-end-2 xl:self-center 2xl:text-[110px]
+              2xl:text-nowrap 2xl:pl-20"
     >
       Lorem <br class="md:hidden" />ipsum
     </h1>
     <div
-      class="order-2 md:order-0 self-center -translate-y-12 md:flex md:flex-col md:gap-8 md:translate-y-0 lg:gap-10"
+      class="order-2 md:order-0 self-center -translate-y-12 md:flex md:flex-col md:gap-8 md:translate-y-6 lg:gap-10
+            xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 xl:self-start xl:justify-self-center xl:translate-y-0 xl:pr-36"
     >
       <h2
         class="text-2xl text-new-pink font-comfortaa font-semibold max-w-[370px] text-center
-        md:text-white lg:text-3xl lg:max-w-[420px]"
+        md:text-white lg:text-3xl lg:max-w-[420px] xl:text-left"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
-      <div class="hidden md:block md:text-center">
-        <button
-          class="font-bold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm"
-          >Veja mais</button
+      <div class="hidden md:block md:text-center xl:text-left">
+        <a
+          href="#produtos"
+          class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
+          >Veja mais</a
         >
       </div>
     </div>
     <div
-      class="order-1 self-center w-100 h-100 md:order-0 md:ml-0 md:translate-x-0"
+      class="order-1 self-center w-100 h-100 md:order-0 md:ml-0 md:-translate-x-2
+            xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-3 xl:justify-self-center xl:w-130 xl:h-130"
     >
       <Image
         src={heroImage}
@@ -151,6 +160,59 @@ import heroImage from "../../assets/hero-images/kawaii.png";
     }
     100% {
       transform: translateY(0);
+    }
+  }
+
+  .shake-anchor {
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: periodicShake 6s ease-in-out infinite;
+  }
+
+  @media (min-width: 768px) {
+    .shake-nav {
+      transform-origin: bottom center;
+      animation: navShake 8s ease-in-out infinite;
+    }
+  }
+
+  @keyframes periodicShake {
+    0%,
+    75%,
+    100% {
+      transform: rotate(0deg);
+    }
+    88% {
+      transform: rotate(12deg);
+    }
+    85% {
+      transform: rotate(-12deg);
+    }
+    90% {
+      transform: rotate(12deg);
+    }
+    95% {
+      transform: rotate(-12deg);
+    }
+  }
+
+  @keyframes navShake {
+    0%,
+    75%,
+    100% {
+      transform: translateX(0);
+    }
+    88% {
+      transform: translateX(-10px);
+    }
+    85% {
+      transform: translateX(10px);
+    }
+    90% {
+      transform: translateX(-10px);
+    }
+    95% {
+      transform: translateX(10px);
     }
   }
 </style>
