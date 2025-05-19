@@ -1,7 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import donut from "../../assets/promo-images/pexels-hannia-torres-348555462-14160765.jpg";
-import kawaiiPromo from "../../assets/promo-images/kawaii-promo.png";
+import kawaiiDonut from "../../assets/promo-images/kawaii-promo.png";
+import KawaiiCake from "../../assets/promo-images/fatia-de-bolo-de-cereja-kawaii.png";
+import bolo from "../../assets/promo-images/bolo.jpg";
+
+const { title, description, icone, produto } = Astro.props;
+
+let iconeIMG = icone === "kawaii-donut" ? kawaiiDonut : KawaiiCake;
+let produtoIMG = produto === "produto-donut" ? donut : bolo;
 ---
 
 <section
@@ -21,13 +28,13 @@ import kawaiiPromo from "../../assets/promo-images/kawaii-promo.png";
           id="promo-heading"
           class="font-extrabold text-md text-left text-[#333333] font-comfortaa md:text-xl sm:w-[80%] z-1"
         >
-          Donuts deliciosos esperando por você 😋
+          {title}
         </h2>
       </header>
       <p
         class="text-sm pr-2 font-nunito text-[#4d4d4d] sm:w-[80%] md:text-md z-1"
       >
-        Desconto de 15% em compras de donuts de chocolate!
+        {description}
       </p>
       <footer class="sm:mt-6 z-10">
         <a
@@ -39,16 +46,16 @@ import kawaiiPromo from "../../assets/promo-images/kawaii-promo.png";
     </section>
     <figure>
       <Image
-        src={donut}
+        src={produtoIMG}
         alt="donuts"
         class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl sm:w-70 md:w-90"
         format="avif"
       />
     </figure>
     <Image
-      src={kawaiiPromo}
+      src={iconeIMG}
       alt="donuts"
-      class="object-contain w-50 h-auto absolute -left-32 -bottom-20 imagem-flutuante rounded-tr-2xl rounded-br-2xl hidden md:block"
+      class="object-contain w-40 h-auto absolute -left-24 -bottom-20 imagem-flutuante rounded-tr-2xl rounded-br-2xl hidden md:block"
       format="avif"
     />
   </article>
