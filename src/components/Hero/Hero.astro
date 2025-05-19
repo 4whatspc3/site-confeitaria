@@ -1,42 +1,44 @@
 ---
 import { Image } from "astro:assets";
 import navLogo from "../../assets/astro.svg";
-import heroImage from "../../assets/hero-images/a.jpg";
+import heroImage from "../../assets/hero-images/kawaii.png";
 ---
 
 <header
   id="home"
-  class="bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-x-hidden gap-10 md:gap-12 overflow-y-hidden"
+  class="bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] magicpattern bg-cover"
 >
   <nav
-    class="flex justify-between items-center bg-cotton-candy p-2 pr-6 pl-6 rounded-2xl shadow-sm"
+    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-0"
   >
-    <div>
+    <div class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl">
       <Image src={navLogo} alt="logo" class="w-auto h-10" />
     </div>
-    <ul class="hidden sm:flex text-[#d94694] font-medium gap-4 lg:gap-8">
+    <ul
+      class="hidden sm:flex text-[#d94694] font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl"
+    >
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="/menu"> Menu </a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#sobre">Sobre</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#FAQ">FAQ</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#contato">Contato</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="/order">Pedido</a>
       </li>
@@ -58,30 +60,30 @@ import heroImage from "../../assets/hero-images/a.jpg";
           </svg>
         </summary>
         <ul
-          class="absolute bg-cotton-candy text-[#d94694] font-medium rounded-2xl mt-6 p-4 -translate-x-15 flex flex-col gap-2 shadow-sm z-10"
+          class="absolute bg-morning-glory text-new-pink text-center font-bold rounded-2xl mt-6 p-4 -translate-x-15 flex flex-col gap-2 shadow-sm z-10"
         >
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
           >
             <a href="/menu"> Menu </a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
           >
             <a href="#sobre">Sobre</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
           >
             <a href="#FAQ">FAQ</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
           >
             <a href="#contato">Contato</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-[#800040] hover:bg-[#800040] hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
           >
             <a href="/order">Pedido</a>
           </li>
@@ -89,36 +91,36 @@ import heroImage from "../../assets/hero-images/a.jpg";
       </details>
     </div>
   </nav>
-  <section class="flex flex-col gap-10 md:justify-between md:gap-12 lg:gap-10">
+  <section class="flex flex-col gap-[6vh] md:justify-between">
     <h1
-      class="text-8xl text-[#800040] font-comfortaa md:text-center
+      class="text-8xl text-new-pink font-bold text-center
               lg:text-9xl"
     >
       Lorem <br class="md:hidden" />ipsum
     </h1>
     <div
-      class="order-2 md:order-0 md:self-center md:flex md:flex-col md:gap-6 lg:gap-8"
+      class="order-2 md:order-0 self-center -translate-y-12 md:flex md:flex-col md:gap-8 md:translate-y-0 lg:gap-10"
     >
       <h2
-        class="text-2xl text-[#333333] font-comfortaa max-w-[370px] md:text-center
-        lg:text-3xl lg:max-w-[420px]"
+        class="text-2xl text-new-pink font-comfortaa font-semibold max-w-[370px] text-center
+        md:text-white lg:text-3xl lg:max-w-[420px]"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
       <div class="hidden md:block md:text-center">
         <button
-          class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm"
+          class="font-bold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm"
           >Veja mais</button
         >
       </div>
     </div>
     <div
-      class="order-1 ml-auto translate-x-20 md:order-0 md:ml-0 md:translate-x-0 md:translate-y-20 md:self-center"
+      class="order-1 self-center w-100 h-100 md:order-0 md:ml-0 md:translate-x-0"
     >
       <Image
         src={heroImage}
         alt="doces"
-        class="object-cover rounded-3xl w-100 h-100 scale-x-[-1] md:w-130 md:h-130"
+        class="imagem-flutuante object-contain rounded-3xl"
         format="avif"
       />
     </div>
@@ -134,5 +136,21 @@ import heroImage from "../../assets/hero-images/a.jpg";
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  .imagem-flutuante {
+    animation: flutuar 3s ease-in-out infinite;
+  }
+
+  @keyframes flutuar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 </style>
