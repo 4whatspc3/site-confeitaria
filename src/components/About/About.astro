@@ -9,68 +9,68 @@ import mary03 from "../../assets/about-images/pexels-shvets-production-7525188.j
   id="sobre"
   aria-labelledby="about-heading"
   role="region"
-  class="min-h-screen overflow-x-hidden flex flex-col gap-[4vh] p-4 bg-[#fff5e6] lg:gap-[6vh]"
+  class="min-h-screen overflow-x-hidden flex flex-col gap-[4vh] p-8 bg-[#fff5e6] lg:gap-[6vh] aboutPattern bg-cover"
 >
   <h2
     id="about-heading"
-    class="text-5xl text-center text-[#800040] font-medium lg:text-6xl"
+    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl"
   >
     Sobre
   </h2>
-  <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-start">
-    <div class="self-center">
-      <Image
-        src={mary01}
-        alt="Foto da Mary trabalhando"
-        class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100 md:w-120 md:h-120"
-        format="avif"
-      />
+  <section
+    class="flex flex-col gap-[4vh] lg:gap-[6vh] lg:w-full lg:max-w-[1024px] lg:mx-auto"
+  >
+    <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-start">
+      <div class="self-center">
+        <Image
+          src={mary01}
+          alt="Foto da Mary trabalhando"
+          class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100"
+          format="avif"
+        />
+      </div>
+      <p
+        class="self-center text-center text-[#333333] font-medium max-w-100 sm:max-w-120
+            lg:text-left lg:text-3xl lg:leading-10 lg:max-w-120 relative"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim labore
+        ipsa, veritatis dicta ipsam qui, sit harum aut quidem alias quia
+        consequuntur, exercitationem neque sapiente.
+      </p>
     </div>
-    <p
-      class="self-center text-center text-[#333333] font-nunito max-w-100 sm:max-w-120 md:max-w-140
-            lg:text-left lg:text-3xl lg:leading-10 lg:max-w-120"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim labore
-      ipsa, veritatis dicta ipsam qui, sit harum aut quidem alias quia
-      consequuntur, exercitationem neque sapiente. Atque esse minima repellendus
-      perferendis! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-    </p>
-  </div>
-  <h3 class="text-4xl text-center text-[#800040] font-medium lg:text-5xl">
-    mais sobre...
-  </h3>
-  <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-end">
-    <div class="self-center lg:order-2">
-      <Image
-        src={mary02}
-        alt="ok"
-        class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100 md:w-120 md:h-120"
-        format="avif"
-      />
-    </div>
-    <p
-      class="self-center text-center text-[#333333] font-nunito max-w-100 sm:max-w-120
+    <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-end">
+      <div class="self-center lg:order-2">
+        <Image
+          src={mary02}
+          alt="ok"
+          class="object-cover object-top w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100"
+          format="avif"
+        />
+      </div>
+      <p
+        class="self-center text-center text-[#333333] font-medium max-w-100 sm:max-w-120
       lg:text-right lg:text-3xl lg:leading-10 lg:max-w-120 lg:order-1"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo impedit
-      eum vel dignissimos architecto amet voluptatem culpa reiciendis.
-    </p>
-  </div>
-  <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[6vh] lg:self-start">
-    <div class="m-auto">
-      <Image
-        src={mary03}
-        alt="ok"
-        class="m-auto object-cover object-center w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100 md:w-120 md:h-120"
-        format="avif"
-      />
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo
+        impedit eum vel dignissimos architecto amet voluptatem culpa reiciendis.
+      </p>
     </div>
-    <p
-      class="self-center text-center text-[#333333] font-nunito max-w-100 sm:max-w-120
+    <div class="flex flex-col gap-[4vh] lg:flex-row lg:gap-[4vh] lg:self-start">
+      <div class="m-auto">
+        <Image
+          src={mary03}
+          alt="ok"
+          class="m-auto object-cover object-center w-80 h-80 rounded-2xl shadow-sm sm:w-100 sm:h-100"
+          format="avif"
+        />
+      </div>
+      <p
+        class="self-center text-center text-[#333333] font-medium max-w-100 sm:max-w-120
       lg:text-left lg:text-3xl lg:leading-10 lg:max-w-120 lg:order-1"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo impedit
-      eum vel dignissimos architecto amet voluptatem culpa reiciendis.
-    </p>
-  </div>
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quo
+        impedit eum vel dignissimos architecto amet voluptatem culpa reiciendis.
+      </p>
+    </div>
+  </section>
 </section>
