@@ -20,6 +20,36 @@
 }
 
 
+@media (min-width: 768px) {
+  .fade-sides {
+    position: relative; 
+  }
+
+  .fade-sides::before,
+  .fade-sides::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  height: 320px;
+  width: 100px; 
+  pointer-events: none; 
+  z-index: 2;
+  border-radius: 1rem; 
+}
+
+  .fade-sides::before {
+    left: -2px;
+    background: linear-gradient(to right, #ffb3d9, transparent);
+  }
+
+  .fade-sides::after {
+    right: -2px;
+    background: linear-gradient(to left, #ffb3d9, transparent);
+  }
+}
+
+
+
 }
 
 @theme {
