@@ -17,11 +17,11 @@ let produtoIMG = produto === "produto-donut" ? donut : bolo;
   class=`w-full min-h-[50vh] p-4 flex justify-center items-center bg-[#e6ffee] promoDonutPattern bg-contain`
 >
   <article
-    class="flex rounded-2xl bg-morning-glory shadow-sm hover:scale-105 transition-transform duration-1000 ease-in-out w-full max-w-[420px]
+    class="flex rounded-2xl bg-morning-glory hover:scale-105 transition-transform duration-1000 ease-in-out w-full max-w-[420px]
     sm:max-w-[520px] sm:h-[260px] md:max-w-[620px] md:h-[300px] md:relative"
   >
     <section
-      class="relative flex flex-col col-10 gap-6 p-4 w-full h-full sm:gap-8 md:gap-10"
+      class="relative flex flex-col col-10 gap-6 p-4 w-full h-full sm:gap-8 md:gap-10 border-1 rounded-tl-2xl rounded-bl-2xl"
     >
       <header>
         <h2
@@ -39,7 +39,7 @@ let produtoIMG = produto === "produto-donut" ? donut : bolo;
       <footer class="sm:mt-6 z-10">
         <a
           href="/menu"
-          class="bg-outrageous-orange text-[#ffffff] p-3 rounded-3xl text-sm font-semibold font-nunito hover:bg-orange-400"
+          class="bg-outrageous-orange text-[#ffffff] p-3 rounded-3xl text-sm font-semibold font-nunito hover:bg-orange-400 border-1 border-black"
           >Encomende já!</a
         >
       </footer>
@@ -48,7 +48,7 @@ let produtoIMG = produto === "produto-donut" ? donut : bolo;
       <Image
         src={produtoIMG}
         alt="donuts"
-        class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl sm:w-70 md:w-90"
+        class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl border-1 sm:w-70 md:w-90"
         format="avif"
       />
     </figure>
