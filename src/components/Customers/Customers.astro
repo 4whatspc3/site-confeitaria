@@ -5,6 +5,8 @@ import Score from "./Score.astro";
 
 import coelhoKawaii from "../../assets/customers-images/coelho.png";
 
+import Promo from "../Promo/Promo.astro";
+
 const arrCustomers = [
   {
     id: 0,
@@ -53,13 +55,13 @@ const arrCustomers = [
 <section
   aria-labelledby="customers-heading"
   role="region"
-  class="min-h-screen overflow-hidden flex flex-col gap-[10vh] p-8 pl-1 pr-0 bg-[#f2e6ff] sm:gap-[12vh] relative bluePattern bg-cover border-l-1 border-r-1"
+  class="min-h-screen overflow-hidden flex flex-col gap-[10vh] p-8 pl-1 pr-0 bg-[#f2e6ff] sm:gap-[12vh] relative bluePattern bg-cover border-1 border-t-0"
 >
   <h2
     id="customers-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
+    class="text-5xl text-center text-new-pink font-semibold pl-4 pr-4 lg:text-6xl text-outline"
   >
-    O que <br class="md:hidden" />as clientes dizem
+    O que as<br class="md:hidden" />clientes dizem
   </h2>
   <div class="relative md:self-center">
     <section
@@ -135,6 +137,12 @@ const arrCustomers = [
       delas é o ingrediente mais importante da nossa confeitaria!
     </p>
   </div>
+  <Promo
+    title="Bolos gostosos feitos no ponto 😋"
+    description="Desconto de 10% em compras de bolos de morango!"
+    icone="kawaii-cake"
+    produto="produto-bolo"
+  />
 </section>
 
 <style>
