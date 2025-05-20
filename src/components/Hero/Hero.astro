@@ -9,38 +9,38 @@ import heroImage from "../../assets/hero-images/kawaii.png";
   class="pinkPattern bg-cover bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh]"
 >
   <nav
-    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl shadow-sm md:bg-transparent md:shadow-none md:p-0 2xl:w-[1440px] 2xl:mx-auto shake-nav"
+    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl border-1 md:bg-transparent md:border-none md:p-0 2xl:w-[1440px] 2xl:mx-auto shake-nav"
   >
     <div
-      class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:shadow-sm"
+      class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1"
     >
       <Image src={navLogo} alt="logo" class="w-auto h-10" />
     </div>
     <ul
-      class="hidden sm:flex text-new-pink font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:shadow-sm"
+      class="hidden sm:flex text-new-pink font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1 md:border-black"
     >
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+        class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="/menu"> Menu </a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+        class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#sobre">Sobre</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+        class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#FAQ">FAQ</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+        class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="#contato">Contato</a>
       </li>
       <li
-        class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+        class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
       >
         <a href="/order">Pedido</a>
       </li>
@@ -62,30 +62,30 @@ import heroImage from "../../assets/hero-images/kawaii.png";
           </svg>
         </summary>
         <ul
-          class="absolute bg-morning-glory text-new-pink text-center font-bold rounded-2xl mt-6 p-4 -translate-x-15 flex flex-col gap-2 shadow-sm z-10"
+          class="absolute bg-morning-glory text-new-pink text-center font-bold rounded-2xl mt-6 p-4 -translate-x-15 flex flex-col gap-2 border-1 border-black z-10"
         >
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
+            class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
           >
             <a href="/menu"> Menu </a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white"
           >
             <a href="#sobre">Sobre</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white"
           >
             <a href="#FAQ">FAQ</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white"
           >
             <a href="#contato">Contato</a>
           </li>
           <li
-            class="bg-white rounded-2xl p-2 border-1 border-new-pink hover:bg-new-pink hover:text-white"
+            class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white"
           >
             <a href="/order">Pedido</a>
           </li>
@@ -100,7 +100,7 @@ import heroImage from "../../assets/hero-images/kawaii.png";
       class="text-8xl text-new-pink font-bold text-center
               lg:text-9xl xl:text-8xl xl:col-start-1 xl:col-end-2
               xl:row-start-1 xl:row-end-2 xl:self-center 2xl:text-[110px]
-              2xl:text-nowrap 2xl:pl-20"
+              2xl:text-nowrap 2xl:pl-20 text-outline"
     >
       Lorem <br class="md:hidden" />ipsum
     </h1>
@@ -109,8 +109,8 @@ import heroImage from "../../assets/hero-images/kawaii.png";
             xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 xl:self-start xl:justify-self-center xl:translate-y-0 xl:pr-36"
     >
       <h2
-        class="text-2xl text-new-pink font-comfortaa font-semibold max-w-[370px] text-center
-        md:text-white lg:text-3xl lg:max-w-[420px] xl:text-left"
+        class="text-2xl text-new-pink font-bold max-w-[370px] text-center
+        md:text-white addtext-outline md:font-extrabold lg:text-3xl lg:max-w-[420px] xl:text-left"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </h2>
@@ -173,6 +173,10 @@ import heroImage from "../../assets/hero-images/kawaii.png";
     .shake-nav {
       transform-origin: bottom center;
       animation: navShake 8s ease-in-out infinite;
+    }
+
+    .addtext-outline {
+      -webkit-text-stroke: 1px black;
     }
   }
 
