@@ -3,16 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @layer utilities {
-.magicpattern { 
+.pinkPattern { 
   background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23ffcfe6%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23ffdbec%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23ffebf2%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23fff0f5%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%23ffb3d9%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 466c116.65-1.197 233.3-2.394 342-18 108.7-15.606 209.449-45.622 315-21 105.551 24.622 215.905 103.882 331 93 115.095-10.882 234.933-111.907 342-119 107.067-7.093 201.364 79.744 326 118s279.61 27.93 342 11c62.39-16.93 32.195-40.465 42-64l-40 934H0Z%22 fill=%22url(%23a)%22%2F%3E%3Cpath d=%22M0 933c116.321-35.228 232.642-70.456 345-52 112.358 18.456 220.752 90.594 330 102 109.248 11.406 219.348-37.922 331-65 111.652-27.078 224.855-31.908 338-32 113.145-.092 226.231 4.552 344 31s240.22 74.7 293 81c52.78 6.3 35.89-29.35 59-65l-40 467H0Z%22 fill=%22url(%23b)%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.productsPattern { 
+.bluePattern { 
   background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23c5eeec%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23d3f2f0%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient id=%22b%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23e6f7ff%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23ecf9ff%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%23a4e5d8%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 466c120.159 38.971 240.318 77.943 355 66 114.682-11.943 223.887-74.8 326-84 102.113-9.2 197.132 35.259 306 57s231.583 20.766 345 10c113.417-10.766 217.535-31.322 339-31 121.465.322 260.276 21.52 318 22 57.724.48 34.362-19.76 51-40l-40 934H0Z%22 fill=%22url(%23a)%22%2F%3E%3Cpath d=%22M0 933c96.968-36 193.935-71.999 310-66 116.065 5.999 251.227 53.995 370 80 118.773 26.005 221.157 30.018 334 11 112.843-19.018 236.143-61.067 336-66s176.27 27.249 301 36c124.73 8.751 297.78-5.928 364-9 66.22-3.072 25.61 5.464 25 14l-40 467H0Z%22 fill=%22url(%23b)%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.promoPattern { 
-  background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath fill=%22%23f5fcfb%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 466h0c84.892 6.102 169.784 12.204 252 24 82.216 11.796 161.756 29.287 247 22 85.244-7.287 176.194-39.353 262-61 85.806-21.647 166.47-32.875 246-34s157.926 7.853 243 22c85.074 14.147 176.828 33.463 263 39 86.172 5.537 166.764-2.704 247-7 80.236-4.296 160.118-4.648 280-5%22 fill=%22none%22 stroke=%22%23e2f6f2%22 stroke-width=%226%22 stroke-linecap=%22round%22%2F%3E%3Cpath d=%22M0 933h0c81.081 17.598 162.163 35.195 249 25 86.837-10.195 179.43-48.183 265-56s164.119 14.537 243 9c78.881-5.537 158.095-38.964 241-36 82.905 2.964 169.5 42.32 254 49s166.904-19.317 253-26 175.885 5.948 259 15c83.115 9.052 159.558 14.526 276 20%22 fill=%22none%22 stroke=%22%23cdf0e9%22 stroke-width=%226%22 stroke-linecap=%22round%22%2F%3E%3C%2Fsvg%3E");
+.promoDonutPattern { 
+  background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23f9fdff%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23fafdff%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%23e9f8ff%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 700c109.57-4.593 219.142-9.186 328-31s217.004-60.85 330-34c112.996 26.85 230.841 119.584 343 152 112.159 32.416 218.63 4.514 325-35s212.638-90.638 338-112c125.362-21.362 269.818-12.96 329 2 59.182 14.96 33.091 36.48 47 58l-40 700H0Z%22 fill=%22url(%23a)%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.promoCakePattern { 
+  background-image: url("data:image/svg+xml;utf8,%3Csvg width=%222000%22 height=%221400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient id=%22a%22 gradientTransform=%22rotate(90)%22%3E%3Cstop offset=%225%25%22 stop-color=%22%23fffafc%22%2F%3E%3Cstop offset=%2295%25%22 stop-color=%22%23fffbfc%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath fill=%22%23ffedf3%22 d=%22M0 0h2000v1400H0z%22%2F%3E%3Cpath d=%22M0 700c111.912-27.225 223.823-54.45 336-29 112.177 25.45 224.619 103.575 337 92 112.381-11.575 224.702-112.85 334-120 109.298-7.15 215.575 79.826 322 97 106.425 17.174 213-35.453 336-66 123-30.547 262.429-39.013 321-31 58.571 8.013 36.286 32.507 54 57l-40 700H0Z%22 fill=%22url(%23a)%22%2F%3E%3C%2Fsvg%3E");
 }
 
 .aboutPattern { 
@@ -39,12 +43,12 @@
 
   .fade-sides::before {
     left: -2px;
-    background: linear-gradient(to right, #ffb3d9, transparent);
+    background: linear-gradient(to right, #a4e5d8, transparent);
   }
 
   .fade-sides::after {
     right: -2px;
-    background: linear-gradient(to left, #ffb3d9, transparent);
+    background: linear-gradient(to left, #a4e5d8, transparent);
   }
 }
 
