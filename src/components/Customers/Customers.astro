@@ -53,11 +53,11 @@ const arrCustomers = [
 <section
   aria-labelledby="customers-heading"
   role="region"
-  class="min-h-screen overflow-hidden flex flex-col gap-[10vh] p-8 pl-1 pr-0 bg-[#f2e6ff] md:gap-[12vh] relative bluePattern bg-cover"
+  class="min-h-screen overflow-hidden flex flex-col gap-[10vh] p-8 pl-1 pr-0 bg-[#f2e6ff] sm:gap-[12vh] relative bluePattern bg-cover"
 >
   <h2
     id="customers-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl"
+    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
   >
     O que <br class="md:hidden" />as clientes dizem
   </h2>
@@ -67,7 +67,7 @@ const arrCustomers = [
     <div class="show-animation obey-animation flex gap-4 md:gap-6">
       {
         arrCustomers.map((item) => (
-          <article class="flex flex-col gap-5 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm mb-2 md:mb-0 md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
+          <article class="flex flex-col gap-5 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 border-1 mb-2 md:mb-0 md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
             <header>
               <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
                 {item.title}
@@ -85,10 +85,10 @@ const arrCustomers = [
         ))
       }
     </div>
-    <div class="show-animation obey-animation flex gap-4 md:gap-6">
+    <div class="hidden show-animation obey-animation md:flex gap-4 md:gap-6">
       {
         arrCustomers.map((item) => (
-          <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 shadow-sm md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
+          <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 border-1 md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
             <header>
               <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
                 {item.title}
@@ -109,7 +109,7 @@ const arrCustomers = [
   </section>
   <div class="self-center p-2">
     <p
-      class="text-center font-medium text-[#333333] max-w-[500px] md:max-w-[600px]"
+      class="text-center font-medium text-[#333333] max-w-[500px] md:max-w-[600px] sm:text-lg"
     >
       Nossas clientes estão encantadas com cada doce feito com carinho e
       dedicação. Cada bolo, cada sobremesa, cada detalhe é pensado para
@@ -123,13 +123,13 @@ const arrCustomers = [
     <Image
       src={coelhoKawaii}
       alt="donuts"
-      class="object-contain w-50 h-auto -left-12 bottom-75 absolute z-10"
+      class="object-contain w-40 h-auto -left-12 bottom-78 absolute z-10"
       format="avif"
     />
     <Image
       src={coelhoKawaii}
       alt="donuts"
-      class="object-contain w-50 h-auto -right-12 bottom-75 absolute z-10 scale-x-[-1]"
+      class="object-contain w-40 h-auto -right-12 bottom-78 absolute z-10 scale-x-[-1]"
       format="avif"
     />
   </div>
