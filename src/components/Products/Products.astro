@@ -73,7 +73,7 @@ const arrProducts = [
 >
   <h2
     id="products-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl"
+    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
   >
     Lorem ipsum
   </h2>
@@ -82,12 +82,12 @@ const arrProducts = [
   >
     {
       arrProducts.map((item) => (
-        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 shadow-sm lg:max-w-80 mb-2">
+        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 border-1 lg:max-w-80 mb-2">
           <figure class="self-center">
             <Image
               src={item.source}
               alt={item.alt}
-              class="object-cover w-70 h-70 rounded-3xl"
+              class="object-cover w-70 h-70 rounded-3xl border-1"
               format="avif"
             />
           </figure>
@@ -105,7 +105,7 @@ const arrProducts = [
             <p class="font-bold text-[#d94694]">{item.price}</p>
             <a
               href="/menu"
-              class="bg-[#ffebf2] border-1 border-[#ffdae9] text-[#d94694]
+              class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694]
               rounded-2xl hover:scale-110"
             >
               <svg
@@ -129,7 +129,7 @@ const arrProducts = [
   <div class="self-center lg:-translate-y-8">
     <a
       href="/menu"
-      class="font-semibold font-nunito bg-[#e60073] text-[#ffffff] p-4 rounded-3xl shadow-sm hover:bg-pink-500 transition-all duration-300 ease-in-out"
+      class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
       >Veja mais</a
     >
   </div>
