@@ -28,16 +28,16 @@ const { sectionTitle, arr } = Astro.props;
             />
           </figure>
           <header>
-            <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+            <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694] ">
               {item.title}
             </h2>
           </header>
-          <section>
+          <section class="flex-1">
             <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
               {item.details}
             </p>
           </section>
-          <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
+          <footer class="mt-auto flex justify-between items-center pl-4 pr-4 mt-2">
             <p class="font-bold text-[#d94694]">{item.price}</p>
             <section class="flex gap-6">
               <button
