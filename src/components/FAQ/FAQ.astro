@@ -51,17 +51,17 @@ const arrFAQ = [
 >
   <h2
     id="faq-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl"
+    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
   >
     FAQ
   </h2>
-  <p class="text-center text-new-pink font-comfortaa font-semibold">
+  <p class="text-center text-white font-extrabold text-outline text-3xl">
     Questões mais frequentes
   </p>
   <section class="flex flex-col gap-[4vh]">
     {
       arrFAQ.map((item) => (
-        <div class="w-full flex items-center justify-between bg-morning-glory p-4 rounded-2xl shadow-sm md:max-w-[720px] md:self-center">
+        <div class="w-full flex items-center justify-between bg-morning-glory p-4 rounded-2xl border-1 md:max-w-[720px] md:self-center">
           <div class="flex flex-col gap-2">
             <h3 class="text-base font-semibold text-black font-comfortaa">
               {item.title}
@@ -77,7 +77,7 @@ const arrFAQ = [
             <button
               id={item.id}
               type="button"
-              class="display-more bg-outrageous-orange text-morning-glory rounded-2xl hover:scale-105"
+              class="display-more bg-outrageous-orange text-morning-glory rounded-2xl hover:scale-105 border-1 border-black"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
