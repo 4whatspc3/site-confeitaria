@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+import Promo from "../Promo/Promo.astro";
+
 import prod00 from "../../assets/products-images/pexels-suzyhazelwood-1126359.jpg";
 import prod01 from "../../assets/products-images/pexels-alejandro-aznar-155337093-30694835.jpg";
 import prod02 from "../../assets/products-images/pexels-ron-lach-10117826.jpg";
@@ -75,7 +77,7 @@ const arrProducts = [
     id="products-heading"
     class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
   >
-    Lorem ipsum
+    Doces
   </h2>
   <section
     class="flex overflow-x-auto gap-4 p-2 lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center lg:overflow-x-hidden xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
@@ -126,13 +128,19 @@ const arrProducts = [
       ))
     }
   </section>
-  <div class="self-center lg:-translate-y-8">
+  <div class="self-center">
     <a
       href="/menu"
       class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
       >Veja mais</a
     >
   </div>
+  <Promo
+    title="Donuts deliciosos esperando por você 😋"
+    description="Desconto de 15% em compras de donuts de chocolate!"
+    icone="kawaii-donut"
+    produto="produto-donut"
+  />
 </section>
 
 <style>
