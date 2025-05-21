@@ -81,6 +81,13 @@
     orderDetails.value = `${details}\n\nTotal: R$ ${total}`;
   });
 
+  function redirectToWhatsapp(message) {
+    const url = new URL("/api/whatsapp", window.location.origin);
+    url.searchParams.append("message", message);
+    console.log("URL chamada:", url.toString());
+    window.open(url.toString(), "_blank", "noopener,noreferrer");
+  }
+
   document
     .getElementById("orderForm")
     .addEventListener("submit", function (event) {
@@ -93,14 +100,15 @@
       }
 
       const name = document.getElementById("name").value;
+      console.log(name);
       const address = document.getElementById("address").value;
+      console.log(address);
       const orderDetails = document.getElementById("orderDetails").value;
+      console.log(orderDetails);
 
-      const message = `Olá, tudo bem? Meu nome é: ${name}.\nAqui estão detalhes do meu pedido:\n${orderDetails}\nE esse é o meu endereço: ${address}.`;
+      const message = `Olá, tudo bem? Meu nome é ${name}.\nAqui estão detalhes do meu pedido:\n${orderDetails}\nE esse é o meu endereço: ${address}.`;
+      console.log(message);
 
-      const phoneNumber = "59888888888";
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      redirectToWhatsapp(message);
     });
 </script>
