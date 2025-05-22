@@ -1,6 +1,5 @@
 // astro.config.mjs
 import dotenv from 'dotenv';
-dotenv.config();
 
 // @ts-check
 import { defineConfig } from 'astro/config';
