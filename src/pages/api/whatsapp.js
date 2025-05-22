@@ -1,8 +1,12 @@
 // src/pages/api/whatsapp.js
 export const prerender = false;
 
-export async function GET({ request, env }) {
-  // env.WP_NUMBER vem das Environment Variables do Cloudflare Pages
+export async function GET(context) {
+  const { request } = context;
+  // pega todos os bindings/env configurados no Pages
+  const { env } = context.locals.runtime;
+
+  console.log("[whatsapp] Bindings disponíveis:", Object.keys(env));
   const wpNumber = env.WP_NUMBER;
   if (!wpNumber) {
     console.error("[whatsapp] WP_NUMBER não encontrado em env:", Object.keys(env));
