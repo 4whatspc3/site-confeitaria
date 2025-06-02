@@ -10,12 +10,15 @@ import menuIcon from "../../assets/menu-icons/delete-trash-svgrepo-com.svg";
     <a
       href="/"
       class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694] rounded-2xl rotate-180 hover:bg-[#d94694] hover:text-[#ffebf2] inline-block transition-all duration-300 ease-in-out"
+      aria-label="Voltar para a página inicial"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 m-2 inline-block"
         viewBox="0 0 20 20"
         fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
       >
         <path
           fill-rule="evenodd"
@@ -26,7 +29,10 @@ import menuIcon from "../../assets/menu-icons/delete-trash-svgrepo-com.svg";
   </div>
   <div class="relative">
     <details class="relative">
-      <summary class="cursor-pointer [custom-summary]">
+      <summary
+        class="cursor-pointer [custom-summary]"
+        aria-label="Abrir carrinho de compras"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -36,11 +42,13 @@ import menuIcon from "../../assets/menu-icons/delete-trash-svgrepo-com.svg";
           stroke="currentColor"
           stroke-width="2"
           class="hover:stroke-[#e60073] hover:scale-110 transition-all duration-300 ease-in-out"
+          aria-hidden="true"
+          focusable="false"
         >
           <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </summary>
-      <section
+      <div
         class="absolute -right-4 mt-6 w-70 bg-morning-glory p-4 border-1 rounded-lg"
       >
         <h3 class="mb-4 text-2xl font-extrabold text-outline text-white">
@@ -59,23 +67,27 @@ import menuIcon from "../../assets/menu-icons/delete-trash-svgrepo-com.svg";
           <a
             href="/order"
             class="shake-button mt-4 w-2/3 bg-emerald-500 text-white text-center font-extrabold py-2 pt-4 rounded border-1 border-black hover:bg-emerald-400 transition-colors duration-300"
+            aria-label="Finalizar compra e ir para a página de checkout"
           >
             Finalizar Compra
           </a>
           <button
             id="clear-cart"
             class="mt-4 w-1/3 bg-white text-white py-2 rounded border-1 border-black hover:bg-red-200 transition-colors duration-300 flex items-center justify-center"
+            aria-label="Limpar todo o carrinho de compras"
           >
             <Image
               src={menuIcon}
-              alt="trash can"
+              alt="Ícone de lixeira"
               class="w-10 h-10"
-              width={10}
-              height={10}
+              width={40}
+              height={40}
+              aria-hidden="true"
+              focusable="false"
             />
           </button>
         </div>
-      </section>
+      </div>
     </details>
   </div>
 </nav>
@@ -145,8 +157,7 @@ import menuIcon from "../../assets/menu-icons/delete-trash-svgrepo-com.svg";
 
     cart.map((item) => {
       const newItem = document.createElement("li");
-      newItem.textContent = `${item["titulo"]} - R$ ${item["preco"]} 
-      - Qnt: ${item["quantidade"]}`;
+      newItem.textContent = `${item["titulo"]} - ${item["preco"]} - Qnt: ${item["quantidade"]}`;
       newItem.classList.add("p-2", "bg-white", "rounded", "border-1", "mr-2");
       shopCart?.append(newItem);
     });

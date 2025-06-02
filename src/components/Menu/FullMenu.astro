@@ -10,12 +10,22 @@ import prod03 from "../../assets/products-images/pexels-lina-5732159.jpg";
 import prod04 from "../../assets/products-images/pexels-anna-pyshniuk-2453945-11065339.jpg";
 import prod05 from "../../assets/products-images/pexels-evilin-silva-2101620640-31983295.jpg";
 
+const productAlts = {
+  prod00:
+    "Cheesecake de morango fatiado com calda de morango e frutas frescas.",
+  prod01: "Fatia de bolo Red Velvet com cobertura cremosa.",
+  prod02: "Éclair de chocolate com recheio cremoso e cobertura de ganache.",
+  prod03: "Torta de limão merengue com merengue tostado no topo.",
+  prod04: "Macarons coloridos de framboesa em uma pilha.",
+  prod05: "Brigadeiros gourmet decorados com granulados.",
+};
+
 const arrChocolate = [
   {
     id: "chc-00",
     title: "Cheesecake de Morango",
     source: prod00,
-    alt: "alt",
+    alt: productAlts.prod00,
     details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
     price: "R$ 18,99",
   },
@@ -23,7 +33,7 @@ const arrChocolate = [
     id: "choc-01",
     title: "Bolo Red Velvet",
     source: prod01,
-    alt: "alt",
+    alt: productAlts.prod01,
     details:
       "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
     price: "R$ 34,99",
@@ -32,7 +42,7 @@ const arrChocolate = [
     id: "choc-02",
     title: "Éclair de Chocolate",
     source: prod02,
-    alt: "alt",
+    alt: productAlts.prod02,
     details:
       "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
     price: "R$ 15,99",
@@ -41,7 +51,7 @@ const arrChocolate = [
     id: "choc-03",
     title: "Torta de Limão Merengue",
     source: prod03,
-    alt: "alt",
+    alt: productAlts.prod03,
     details:
       "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
     price: "R$ 11,99",
@@ -50,7 +60,7 @@ const arrChocolate = [
     id: "choc-04",
     title: "Macaron de Framboesa",
     source: prod04,
-    alt: "alt",
+    alt: productAlts.prod04,
     details:
       "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
     price: "R$ 7,89",
@@ -59,7 +69,7 @@ const arrChocolate = [
     id: "choc-05",
     title: "Brigadeiro Gourmet",
     source: prod05,
-    alt: "alt",
+    alt: productAlts.prod05,
     details:
       "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
     price: "R$ 4,99",
@@ -71,7 +81,7 @@ const arrDocesVeganos = [
     id: "veg-00",
     title: "Brownie Vegano de Cacau",
     source: prod00,
-    alt: "alt",
+    alt: productAlts.prod00,
     details:
       "Brownie vegano com toque de cacau e nozes, sem ingredientes derivados de animais.",
     price: "R$ 12,50",
@@ -80,7 +90,7 @@ const arrDocesVeganos = [
     id: "veg-01",
     title: "Mousse de Chocolate Vegano",
     source: prod01,
-    alt: "alt",
+    alt: productAlts.prod01,
     details: "Mousse leve e aerado feito com abacate e cacau, sem laticínios.",
     price: "R$ 14,99",
   },
@@ -88,7 +98,7 @@ const arrDocesVeganos = [
     id: "veg-02",
     title: "Cheesecake Vegano de Frutas Vermelhas",
     source: prod02,
-    alt: "alt",
+    alt: productAlts.prod02,
     details:
       "Cheesecake cremoso com base de castanhas e compota de frutas vermelhas.",
     price: "R$ 19,99",
@@ -97,7 +107,7 @@ const arrDocesVeganos = [
     id: "veg-03",
     title: "Bolo de Cenoura Vegano",
     source: prod03,
-    alt: "alt",
+    alt: productAlts.prod03,
     details: "Bolo úmido com cenoura e glacê de laranja, sem ovos ou leite.",
     price: "R$ 16,50",
   },
@@ -105,7 +115,7 @@ const arrDocesVeganos = [
     id: "veg-04",
     title: "Torta de Limão Vegana",
     source: prod04,
-    alt: "alt",
+    alt: productAlts.prod04,
     details:
       "Torta refrescante com creme de limão e base de biscoito integral vegano.",
     price: "R$ 17,99",
@@ -114,7 +124,7 @@ const arrDocesVeganos = [
     id: "veg-05",
     title: "Cookie Vegano de Chocolate",
     source: prod05,
-    alt: "alt",
+    alt: productAlts.prod05,
     details:
       "Cookie macio com pedaços de chocolate meio amargo e aveia, totalmente vegano.",
     price: "R$ 8,99",
@@ -126,7 +136,7 @@ const arrBiscoitos = [
     id: "bisc-00",
     title: "Biscoito de Chocolate e Amêndoas",
     source: prod00,
-    alt: "alt",
+    alt: productAlts.prod00,
     details: "Biscoito crocante com pedaços de chocolate e amêndoas torradas.",
     price: "R$ 6,99",
   },
@@ -134,7 +144,7 @@ const arrBiscoitos = [
     id: "bisc-01",
     title: "Cookie de Gengibre",
     source: prod01,
-    alt: "alt",
+    alt: productAlts.prod01,
     details: "Cookie aromático de gengibre com uma pitada de canela.",
     price: "R$ 5,99",
   },
@@ -142,7 +152,7 @@ const arrBiscoitos = [
     id: "bisc-02",
     title: "Biscoito de Aveia com Passas",
     source: prod02,
-    alt: "alt",
+    alt: productAlts.prod02,
     details: "Biscoito tradicional com sabor reconfortante de aveia e passas.",
     price: "R$ 4,99",
   },
@@ -150,7 +160,7 @@ const arrBiscoitos = [
     id: "bisc-03",
     title: "Biscoito Integral de Linhaça",
     source: prod03,
-    alt: "alt",
+    alt: productAlts.prod03,
     details: "Biscoito rico em fibras, feito com farinha integral e linhaça.",
     price: "R$ 7,50",
   },
@@ -158,7 +168,7 @@ const arrBiscoitos = [
     id: "bisc-04",
     title: "Biscoito de Limão Siciliano",
     source: prod04,
-    alt: "alt",
+    alt: productAlts.prod04,
     details: "Biscoito refrescante com raspas e suco de limão siciliano.",
     price: "R$ 6,50",
   },
@@ -166,7 +176,7 @@ const arrBiscoitos = [
     id: "bisc-05",
     title: "Biscoito Recheado de Nutella",
     source: prod05,
-    alt: "alt",
+    alt: productAlts.prod05,
     details: "Biscoito macio recheado com creme de avelã e cacau.",
     price: "R$ 8,50",
   },
@@ -177,7 +187,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-00",
     title: "Torta Caseira de Maçã",
     source: prod00,
-    alt: "alt",
+    alt: productAlts.prod00,
     details:
       "Deliciosa torta de maçã com massa fina e recheio de maçã e canela.",
     price: "R$ 15,99",
@@ -186,7 +196,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-01",
     title: "Pão de Queijo Especial",
     source: prod01,
-    alt: "alt",
+    alt: productAlts.prod01,
     details:
       "Pão de queijo quentinho, com textura perfeita, receita exclusiva da casa.",
     price: "R$ 12,99",
@@ -195,7 +205,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-02",
     title: "Bolo de Fubá com Erva-doce",
     source: prod02,
-    alt: "alt",
+    alt: productAlts.prod02,
     details:
       "Bolo tradicional com sabor marcante de fubá e erva-doce, autêntico da casa.",
     price: "R$ 13,50",
@@ -204,7 +214,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-03",
     title: "Muffin de Blueberry",
     source: prod03,
-    alt: "alt",
+    alt: productAlts.prod03,
     details:
       "Muffin macio com mirtilos frescos e toque de baunilha, feito na hora.",
     price: "R$ 9,99",
@@ -213,7 +223,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-04",
     title: "Quindim Tradicional",
     source: prod04,
-    alt: "alt",
+    alt: productAlts.prod04,
     details:
       "Doce tipicamente brasileiro com textura sedosa e sabor marcante de coco.",
     price: "R$ 7,99",
@@ -222,7 +232,7 @@ const arrEspeciaisDaCasa = [
     id: "espc-05",
     title: "Pudim de Leite Condensado",
     source: prod05,
-    alt: "alt",
+    alt: productAlts.prod05,
     details:
       "Pudim cremoso de leite condensado com calda caramelizada, irresistível.",
     price: "R$ 10,99",
@@ -250,15 +260,14 @@ const arrEspeciaisDaCasa = [
     <ItemsMenu sectionTitle="Biscoitos" arr={arrBiscoitos} />
     <ItemsMenu sectionTitle="Especiais da Casa" arr={arrEspeciaisDaCasa} />
   </main>
-  <footer class="self-center">
-    <div>
-      <a
-        href="/order"
-        class="font-bold font-nunito bg-emerald-500 text-[#ffffff] p-4 rounded-3xl border-1 border-black hover:bg-emerald-400"
-        >Finalizar pedido</a
-      >
-    </div>
-  </footer>
+  <div class="self-center">
+    <a
+      href="/order"
+      class="font-bold font-nunito bg-emerald-500 text-[#ffffff] p-4 rounded-3xl border-1 border-black hover:bg-emerald-400"
+      aria-label="Finalizar seu pedido e ir para o carrinho de compras"
+      >Finalizar pedido</a
+    >
+  </div>
 </section>
 
 <style>
@@ -299,7 +308,7 @@ const arrEspeciaisDaCasa = [
 
   function addToCart(card) {
     const id = card.id;
-    const titulo = card.querySelector("header h2").textContent;
+    const titulo = card.querySelector("header h3").textContent;
     const precoTexto = card.querySelector("footer p").textContent;
 
     const preco = parseFloat(
@@ -324,7 +333,7 @@ const arrEspeciaisDaCasa = [
 
   function removeFromCart(card) {
     const id = card.id;
-    const titulo = card.querySelector("header h2").textContent;
+    const titulo = card.querySelector("header h3").textContent;
 
     const index = cart.findIndex((produto) => produto.id === id);
 

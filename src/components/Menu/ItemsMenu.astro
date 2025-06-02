@@ -10,7 +10,7 @@ const { sectionTitle, arr } = Astro.props;
   >
     {sectionTitle}
   </h2>
-  <section
+  <div
     class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
   >
     {
@@ -25,39 +25,42 @@ const { sectionTitle, arr } = Astro.props;
               alt={item.alt}
               class="object-cover w-70 h-70 rounded-3xl border-1"
               format="avif"
+              loading="lazy"
             />
           </figure>
           <header>
-            <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694] ">
+            <h3 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694] ">
               {item.title}
-            </h2>
+            </h3>
           </header>
-          <section class="flex-1">
+          <div class="flex-1">
             <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
               {item.details}
             </p>
-          </section>
+          </div>
           <footer class="mt-auto flex justify-between items-center pl-4 pr-4 mt-2">
             <p class="font-bold text-[#d94694]">{item.price}</p>
-            <section class="flex gap-6">
+            <div class="flex gap-6">
               <button
                 type="button"
                 class="rmv-btn cursor-pointer bg-[#fff] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-full hover:scale-110 hover:bg-red-500 hover:text-white"
+                aria-label={`Remover um ${item.title} do carrinho`}
               >
                 -
               </button>
               <button
                 type="button"
                 class="add-btn cursor-pointer bg-[#fff] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-full hover:scale-110 hover:bg-emerald-500 hover:text-white"
+                aria-label={`Adicionar um ${item.title} ao carrinho`}
               >
                 +
               </button>
-            </section>
+            </div>
           </footer>
         </article>
       ))
     }
-  </section>
+  </div>
 </section>
 
 <style>
