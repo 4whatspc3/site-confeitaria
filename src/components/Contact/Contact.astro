@@ -16,10 +16,7 @@ import { Image } from "astro:assets";
   <address
     class="flex flex-col gap-4 not-italic bg-[#ffffff] p-4 rounded-2xl border-1 max-w-[500px] self-center md:flex-row md:max-w-[720px]"
   >
-    <section
-      aria-labelledby="footer-address"
-      class="flex flex-col gap-4 md:w-1/2"
-    >
+    <div aria-labelledby="footer-address" class="flex flex-col gap-4 md:w-1/2">
       <h3
         id="footer-address"
         class="text-[#d94694] font-comfortaa font-semibold"
@@ -34,22 +31,32 @@ import { Image } from "astro:assets";
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
           <Image
             src="/contact-icons/phone-outline (1).svg"
-            alt="icone de um teleone"
-            aria-hidden="true"
+            alt="Ícone de telefone"
             class="w-6 md:w-8"
-            width={8}
-            height={8}
+            width={24}
+            height={24}
+            *
+            Adicionado
+            width
+            height
+            explícitos
+            *
           />
-          <a href="tel:+5511912345678">Telefone: (11) 91234-5678</a>
+          <a href="tel:+559999999999">Telefone: (99) 99999-9999</a>
         </li>
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
           <Image
             src="/contact-icons/email-outline (1).svg"
-            alt="icone de um teleone"
-            aria-hidden="true"
+            alt="Ícone de envelope de e-mail"
             class="w-6 md:w-8"
-            width={8}
-            height={8}
+            width={24}
+            height={24}
+            *
+            Adicionado
+            width
+            height
+            explícitos
+            *
           />
           <a href="mailto:contato@docesabor.com.br">contato@docesabor.com.br</a>
         </li>
@@ -58,26 +65,29 @@ import { Image } from "astro:assets";
             href="https://www.whatsapp.com/?lang=pt_BR"
             target="_blank"
             rel="noopener noreferrer"
+            class="flex items-center gap-2"
+            aria-label="Enviar mensagem no WhatsApp para (99) 99999-9999"
           >
             <Image
               src="/contact-icons/whatsapp-svgrepo-com.svg"
-              alt="icone do instagram"
+              alt="Ícone do WhatsApp"
               class="w-6 md:w-8 hover:scale-105"
-              width={8}
-              height={8}
+              width={24}
+              height={24}
+              *
+              Adicionado
+              width
+              height
+              explícitos
+              *
             />
+            WhatsApp
           </a>
-          <a
-            href="https://www.whatsapp.com/?lang=pt_BRhttps://www.whatsapp.com/?lang=pt_BR"
-            aria-label="WhatsApp"
-            target="_blank"
-            rel="noopener noreferrer">WhatsApp</a
-          >
         </li>
       </ul>
-    </section>
+    </div>
 
-    <section
+    <div
       aria-labelledby="footer-social"
       class="flex flex-col gap-4 pt-4 md:pt-0"
     >
@@ -93,47 +103,53 @@ import { Image } from "astro:assets";
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
+            class="flex items-center gap-2"
+            aria-label="Visite nosso perfil no Instagram"
           >
             <Image
               src="/contact-icons/instagram(1).svg"
-              alt="icone do instagram"
+              alt="Ícone do Instagram"
               class="w-6 md:w-8 hover:scale-105"
-              width={8}
-              height={8}
+              width={24}
+              height={24}
+              *
+              Adicionado
+              width
+              height
+              explícitos
+              *
             />
+            @Instagram
           </a>
-          <a
-            href="https://www.instagram.com/"
-            aria-label="Instagram"
-            target="_blank"
-            rel="noopener noreferrer">@Instagram</a
-          >
         </li>
         <li class="flex gap-2 text-[#4d4d4d] font-nunito font-medium">
           <a
             href="https://www.tiktok.com/"
             target="_blank"
             rel="noopener noreferrer"
+            class="flex items-center gap-2"
+            aria-label="Visite nosso perfil no TikTok"
           >
             <Image
               src="/contact-icons/tiktok-svgrepo-com.svg"
-              alt="icone do instagram"
+              alt="Ícone do TikTok"
               class="w-6 md:w-8 hover:scale-105"
-              width={8}
-              height={8}
+              width={24}
+              height={24}
+              *
+              Adicionado
+              width
+              height
+              explícitos
+              *
             />
+            @TikTok
           </a>
-          <a
-            href="https://www.tiktok.com/"
-            aria-label="TikTok"
-            target="_blank"
-            rel="noopener noreferrer">@TikTok</a
-          >
         </li>
       </ul>
-    </section>
+    </div>
   </address>
-  <section
+  <div
     class="footer-credits bg-[#ffffff] p-4 flex flex-col gap-4 rounded-2xl border-1 max-w-[500px] self-center md:min-w-[720px]"
   >
     <p class="text-[#4d4d4d] font-comfortaa font-semibold md:text-center">
@@ -142,7 +158,8 @@ import { Image } from "astro:assets";
     <p
       class="italic text-[#4d4d4d] font-comfortaa font-semibold text-sm md:text-center"
     >
-      Site desenvolvido por empresa XYZ
+      Disclaimer: Este é um site fictício desenvolvido exclusivamente para fins
+      de portfólio.
     </p>
-  </section>
+  </div>
 </footer>
