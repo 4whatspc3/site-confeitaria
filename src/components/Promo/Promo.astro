@@ -9,27 +9,40 @@ const { title, description, icone, produto } = Astro.props;
 
 let iconeIMG = icone === "kawaii-donut" ? kawaiiDonut : KawaiiCake;
 let produtoIMG = produto === "produto-donut" ? donut : bolo;
+
+// Mapeamento para alt texts mais descritivos
+const promoImageAlts = {
+  "kawaii-donut": "Ilustração de um donut fofo e sorridente.",
+  "fatia-de-bolo-de-cereja-kawaii":
+    "Ilustração de uma fatia de bolo de cereja fofo.",
+  "produto-donut": "Donuts variados com diferentes coberturas e granulados.",
+  "produto-bolo": "Bolo de chocolate com cobertura de glacê e granulados.",
+};
+
+// Obtém o alt text específico baseado na prop 'icone' e 'produto'
+const getIconeAlt = (key) => promoImageAlts[key] || "Ícone decorativo";
+const getProdutoAlt = (key) =>
+  promoImageAlts[`produto-${key.split("-")[1]}`] || "Imagem de produto"; // Extrai 'donut' ou 'bolo'
 ---
 
 <section
-  aria-labelledby="promo-heading"
+  class="w-full md:h-100 p-4 flex justify-center items-center"
   role="region"
-  class=`w-full md:h-100 p-4 flex justify-center items-center`
+  aria-label={title}
 >
   <article
-    class="flex rounded-2xl bg-morning-glory hover:scale-105 transition-transform duration-1000 ease-in-out w-full max-w-[420px]
+    class="flex rounded-2xl bg-morning-glory hover:scale-105 transition-transform duration-500 ease-in-out w-full max-w-[420px]
     sm:max-w-[520px] sm:h-[260px] md:max-w-[620px] md:h-[300px] md:relative"
   >
-    <section
+    <div
       class="relative flex flex-col col-10 gap-6 p-4 w-full h-full sm:gap-8 md:gap-10 border-1 rounded-tl-2xl rounded-bl-2xl"
     >
       <header>
-        <h2
-          id="promo-heading"
+        <h3
           class="font-extrabold text-md text-left text-[#333333] font-comfortaa md:text-xl sm:w-[80%] z-1"
         >
           {title}
-        </h2>
+        </h3>
       </header>
       <p
         class="text-sm pr-2 font-nunito text-[#4d4d4d] sm:w-[80%] md:text-md z-1"
@@ -40,21 +53,36 @@ let produtoIMG = produto === "produto-donut" ? donut : bolo;
         <a
           href="/menu"
           class="bg-outrageous-orange text-[#ffffff] p-3 rounded-3xl text-sm font-semibold font-nunito hover:bg-orange-400 border-1 border-black"
-          >Encomende já!</a
+          aria-label={`Encomende já! ${title}`}>Encomende já!</a
         >
       </footer>
-    </section>
+    </div>
     <figure>
       <Image
         src={produtoIMG}
-        alt="donuts"
+        alt={getProdutoAlt(produto)}
+        Alt
+        text
+        dinâmico
+        e
+        mais
+        descritivo
         class="object-cover w-50 h-full rounded-tr-2xl rounded-br-2xl border-1 sm:w-70 md:w-90"
         format="avif"
       />
     </figure>
     <Image
       src={iconeIMG}
-      alt="donuts"
+      alt={getIconeAlt(icone)}
+      Alt
+      text
+      dinâmico
+      e
+      mais
+      descritivo
+      para
+      o
+      ícone
       class="object-contain w-40 h-auto absolute -left-24 -bottom-20 imagem-flutuante rounded-tr-2xl rounded-br-2xl hidden md:block"
       format="avif"
     />

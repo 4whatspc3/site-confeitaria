@@ -15,7 +15,7 @@ const arrProducts = [
     id: 0,
     title: "Cheesecake de Morango",
     source: prod00,
-    alt: "alt",
+    alt: "Fatia de cheesecake de morango com calda vermelha sobre um prato branco.",
     details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
     price: "R$ 18,99",
   },
@@ -23,7 +23,7 @@ const arrProducts = [
     id: 1,
     title: "Bolo Red Velvet",
     source: prod01,
-    alt: "alt",
+    alt: "Fatia de bolo Red Velvet com camadas vermelhas e cobertura de cream cheese branco.",
     details:
       "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
     price: "R$ 34,99",
@@ -32,7 +32,7 @@ const arrProducts = [
     id: 2,
     title: "Éclair de Chocolate",
     source: prod02,
-    alt: "alt",
+    alt: "Éclair de chocolate com cobertura brilhante e recheio cremoso.",
     details:
       "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
     price: "R$ 15,99",
@@ -41,7 +41,7 @@ const arrProducts = [
     id: 3,
     title: "Torta de Limão Merengue ",
     source: prod03,
-    alt: "alt",
+    alt: "Fatia de torta de limão com merengue tostado no topo e base crocante.",
     details:
       "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
     price: "R$ 11,99",
@@ -50,7 +50,7 @@ const arrProducts = [
     id: 4,
     title: "Macaron de Framboesa ",
     source: prod04,
-    alt: "alt",
+    alt: "Macaron rosa de framboesa com recheio cremoso e bagas frescas ao lado.",
     details:
       "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
     price: "R$ 7,89",
@@ -59,7 +59,7 @@ const arrProducts = [
     id: 5,
     title: "Brigadeiro Gourmet",
     source: prod05,
-    alt: "alt",
+    alt: "Brigadeiro gourmet com granulado de chocolate belga e confeitos diversos.",
     details:
       "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
     price: "R$ 4,99",
@@ -71,7 +71,7 @@ const arrProducts = [
   id="produtos"
   aria-labelledby="products-heading"
   role="region"
-  class="bluePattern bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:gap-[8vh] xl:p-8 border-1 border-b-0"
+  class="bluePattern bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:overflow-y-hidden lg:gap-[8vh] xl:p-8 border-1 border-b-0"
 >
   <h2
     id="products-heading"
@@ -79,7 +79,7 @@ const arrProducts = [
   >
     Doces
   </h2>
-  <section
+  <div
     class="flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
   >
     {
@@ -94,9 +94,9 @@ const arrProducts = [
             />
           </figure>
           <header>
-            <h2 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+            <h3 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
               {item.title}
-            </h2>
+            </h3>
           </header>
           <section>
             <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
@@ -107,14 +107,17 @@ const arrProducts = [
             <p class="font-bold text-[#d94694]">{item.price}</p>
             <a
               href="/menu"
-              class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694]
-              rounded-2xl hover:scale-110"
+              class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694] rounded-2xl hover:scale-110"
+              aria-label={`Ver detalhes de ${item.title}`}
+              title={`Clique para ver mais sobre ${item.title}`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 inline-block m-2 "
+                class="h-5 w-5 inline-block m-2"
                 viewBox="0 0 20 20"
                 fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
               >
                 <path
                   fill-rule="evenodd"
@@ -122,17 +125,18 @@ const arrProducts = [
                   clip-rule="evenodd"
                 />
               </svg>
+              <span class="sr-only">Ver detalhes de {item.title}</span>
             </a>
           </footer>
         </article>
       ))
     }
-  </section>
+  </div>
   <div class="self-center">
     <a
       href="/menu"
       class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
-      >Veja mais</a
+      aria-label="Acessar o menu completo de produtos">Veja mais</a
     >
   </div>
   <Promo
@@ -144,6 +148,19 @@ const arrProducts = [
 </section>
 
 <style>
+  /* Adicione esta classe Tailwind customizada para texto visível apenas para leitores de tela */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
   section {
     scrollbar-color: #e60073 transparent;
     scrollbar-width: thin;
