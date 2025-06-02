@@ -72,9 +72,9 @@ const arrCustomers = [
           arrCustomers.map((item) => (
             <article class="flex flex-col gap-5 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 border-1 mb-2 md:mb-0 md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
               <header>
-                <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
+                <h3 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
                   {item.title}
-                </h2>
+                </h3>
               </header>
               <section>
                 <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito ">
@@ -88,14 +88,17 @@ const arrCustomers = [
           ))
         }
       </div>
-      <div class="hidden show-animation obey-animation md:flex gap-4 md:gap-6">
+      <div
+        class="hidden show-animation obey-animation md:flex gap-4 md:gap-6"
+        aria-hidden="true"
+      >
         {
           arrCustomers.map((item) => (
             <article class="flex flex-col gap-4 min-w-70 h-70 bg-[#ffffff] rounded-3xl p-4 pt-10 border-1 md:min-w-80 md:min-h-80 md:gap-6 md:pt-14">
               <header>
-                <h2 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
+                <h3 class="font-extrabold text-xl text-center text-[#d94694] font-comfortaa md:text-2xl">
                   {item.title}
-                </h2>
+                </h3>
               </header>
               <section>
                 <p class="font-bold text-center line-clamp-3 pl-2 pr-4  text-[#4d4d4d] font-nunito">
@@ -115,13 +118,13 @@ const arrCustomers = [
     >
       <Image
         src={coelhoKawaii}
-        alt="donuts"
+        alt="Ilustração de um coelho branco fofo e sorridente acenando, como um mascote."
         class="object-contain w-40 h-auto left-0 bottom-0 absolute z-10"
         format="avif"
       />
       <Image
         src={coelhoKawaii}
-        alt="donuts"
+        alt="Ilustração de um coelho branco fofo e sorridente acenando, como um mascote, virado para a direita."
         class="object-contain w-40 h-auto right-0 bottom-0 absolute z-10 scale-x-[-1]"
         format="avif"
       />
@@ -156,13 +159,12 @@ const arrCustomers = [
       animation: scroll 30s linear infinite;
     }
 
-    .stop-animation:hover {
+    .stop-animation:hover .show-animation {
+      /* Garante que a animação pare apenas quando o pai está em hover */
       animation-play-state: paused;
     }
 
-    .obey-animation {
-      animation-play-state: inherit;
-    }
+    /* Removido .obey-animation pois o comportamento já está no .show-animation e no :hover */
   }
 
   @keyframes scroll {

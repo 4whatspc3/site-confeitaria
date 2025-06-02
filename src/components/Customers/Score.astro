@@ -3,7 +3,11 @@ const { rating, maxStars = 5 } = Astro.props;
 const stars = Array.from({ length: maxStars }, (_, i) => i < rating);
 ---
 
-<div class="flex gap-2 items-center text-amber-300">
+<div
+  class="flex gap-2 items-center text-amber-300"
+  role="img"
+  aria-label={`Avaliação: ${rating} de ${maxStars} estrelas`}
+>
   {
     stars.map((filled, i) => (
       <svg
@@ -17,6 +21,8 @@ const stars = Array.from({ length: maxStars }, (_, i) => i < rating);
         width="24"
         height="24"
         aria-hidden="true"
+        focusable="false"
+        role="presentation"
       >
         <polygon points="12 2 15 10 23 10 17 15 19 23 12 18 5 23 7 15 1 10 9 10" />
       </svg>
