@@ -10,11 +10,14 @@ import heroImage from "../../assets/hero-images/kawaii.png";
 >
   <nav
     class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl border-1 md:bg-transparent md:border-none md:p-0 2xl:w-[1440px] 2xl:mx-auto shake-nav"
+    aria-label="Navegação Principal do Site"
   >
     <div
       class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1"
     >
-      <Image src={navLogo} alt="logo" class="w-auto h-10" />
+      <a href="/" aria-label="Voltar para a página inicial">
+        <Image src={navLogo} alt="Logo da Doce Delícia" class="w-auto h-10" />
+      </a>
     </div>
     <ul
       class="hidden sm:flex text-new-pink font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1 md:border-black"
@@ -128,7 +131,7 @@ import heroImage from "../../assets/hero-images/kawaii.png";
         <a
           href="#produtos"
           class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
-          >Veja mais</a
+          aria-label="Descubra nossos produtos deliciosos">Veja mais</a
         >
       </div>
     </div>
@@ -138,7 +141,7 @@ import heroImage from "../../assets/hero-images/kawaii.png";
     >
       <Image
         src={heroImage}
-        alt="doces"
+        alt="Variedade de doces artesanais coloridos, incluindo cupcakes e donuts"
         class="imagem-flutuante object-contain rounded-3xl"
         format="avif"
       />
