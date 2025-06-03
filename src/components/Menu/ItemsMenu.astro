@@ -10,57 +10,62 @@ const { sectionTitle, arr } = Astro.props;
   >
     {sectionTitle}
   </h2>
-  <div
-    class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+
+  <ul
+    role="list"
+    class="grade-de-produtos flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px] list-none m-0 p-0"
   >
     {
-      arr.map((item) => (
-        <article
-          id={item.id}
-          class="card-item flex flex-col gap-4 min-w-80 h-130 bg-[#ffffff] rounded-3xl p-4 mb-2 border-1 lg:max-w-80"
-        >
-          <figure class="self-center">
-            <Image
-              src={item.source}
-              alt={item.alt}
-              class="object-cover w-70 h-70 rounded-3xl border-1"
-              format="avif"
-              loading="lazy"
-            />
-          </figure>
-          <header>
-            <h3 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694] ">
-              {item.title}
-            </h3>
-          </header>
-          <div class="flex-1">
-            <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
-              {item.details}
-            </p>
-          </div>
-          <footer class="mt-auto flex justify-between items-center pl-4 pr-4 mt-2">
-            <p class="font-bold text-[#d94694]">{item.price}</p>
-            <div class="flex gap-6">
-              <button
-                type="button"
-                class="rmv-btn cursor-pointer bg-[#fff] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-full hover:scale-110 hover:bg-red-500 hover:text-white"
-                aria-label={`Remover um ${item.title} do carrinho`}
-              >
-                -
-              </button>
-              <button
-                type="button"
-                class="add-btn cursor-pointer bg-[#fff] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-full hover:scale-110 hover:bg-emerald-500 hover:text-white"
-                aria-label={`Adicionar um ${item.title} ao carrinho`}
-              >
-                +
-              </button>
+      arr.map((item) => {
+        return (
+          <li
+            role="listitem"
+            id={item.id}
+            class="card-item flex flex-col gap-4 min-w-80 h-130 bg-[#ffffff] rounded-3xl p-4 mb-2 border-1 lg:max-w-80"
+          >
+            <figure class="self-center">
+              <Image
+                src={item.source}
+                alt={item.alt}
+                class="object-cover w-70 h-70 rounded-3xl border-1"
+                format="avif"
+                loading="lazy"
+              />
+            </figure>
+            <header>
+              <h3 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
+                {item.title}
+              </h3>
+            </header>
+            <div class="flex-1">
+              <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
+                {item.details}
+              </p>
             </div>
-          </footer>
-        </article>
-      ))
+            <footer class="mt-auto flex justify-between items-center pl-4 pr-4 mt-2">
+              <p class="font-bold text-[#d94694]">{item.price}</p>
+              <div class="flex gap-6">
+                <button
+                  type="button"
+                  class="rmv-btn cursor-pointer bg-[#fff] border-1 border-red-500 text-red-500 text-3xl pr-3 pl-3 rounded-full hover:scale-110 hover:bg-red-500 hover:text-white"
+                  aria-label={`Remover um ${item.title} do carrinho`}
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  class="add-btn cursor-pointer bg-[#fff] border-1 border-emerald-500 text-emerald-500 text-3xl pr-2 pl-2 rounded-full hover:scale-110 hover:bg-emerald-500 hover:text-white"
+                  aria-label={`Adicionar um ${item.title} ao carrinho`}
+                >
+                  +
+                </button>
+              </div>
+            </footer>
+          </li>
+        );
+      })
     }
-  </div>
+  </ul>
 </section>
 
 <style>
