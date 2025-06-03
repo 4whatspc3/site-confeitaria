@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-
 import Promo from "../Promo/Promo.astro";
 
 import prod00 from "../../assets/products-images/pexels-suzyhazelwood-1126359.jpg";
@@ -15,7 +14,7 @@ const arrProducts = [
     id: 0,
     title: "Cheesecake de Morango",
     source: prod00,
-    alt: "Fatia de cheesecake de morango com calda vermelha sobre um prato branco.",
+    alt: "Cheesecake de morango sobre um prato branco",
     details: "Torta de queijo cremosa com calda ou geleia de morango por cima.",
     price: "R$ 18,99",
   },
@@ -23,7 +22,7 @@ const arrProducts = [
     id: 1,
     title: "Bolo Red Velvet",
     source: prod01,
-    alt: "Fatia de bolo Red Velvet com camadas vermelhas e cobertura de cream cheese branco.",
+    alt: "Fatia de bolo Red Velvet com cobertura de cream cheese",
     details:
       "Um bolo macio com um distintivo sabor de cacau e cor vermelha, coberto com cream cheese.",
     price: "R$ 34,99",
@@ -32,25 +31,25 @@ const arrProducts = [
     id: 2,
     title: "Éclair de Chocolate",
     source: prod02,
-    alt: "Éclair de chocolate com cobertura brilhante e recheio cremoso.",
+    alt: "Éclair de chocolate coberto por ganache brilhante",
     details:
       "Massa folhada recheada com creme de baunilha ou chocolate e coberta com ganache.",
     price: "R$ 15,99",
   },
   {
     id: 3,
-    title: "Torta de Limão Merengue ",
+    title: "Torta de Limão Merengue",
     source: prod03,
-    alt: "Fatia de torta de limão com merengue tostado no topo e base crocante.",
+    alt: "Fatia de torta de limão com merengue tostado no topo",
     details:
       "Base de massa crocante, recheio cítrico de limão e merengue dourado por cima.",
     price: "R$ 11,99",
   },
   {
     id: 4,
-    title: "Macaron de Framboesa ",
+    title: "Macaron de Framboesa",
     source: prod04,
-    alt: "Macaron rosa de framboesa com recheio cremoso e bagas frescas ao lado.",
+    alt: "Macaron rosa de framboesa com recheio cremoso",
     details:
       "Biscoitos leves de amêndoa com recheio de ganache ou geleia de framboesa.",
     price: "R$ 7,89",
@@ -59,7 +58,7 @@ const arrProducts = [
     id: 5,
     title: "Brigadeiro Gourmet",
     source: prod05,
-    alt: "Brigadeiro gourmet com granulado de chocolate belga e confeitos diversos.",
+    alt: "Brigadeiro gourmet com granulado de chocolate belga",
     details:
       "Versão sofisticada do clássico brasileiro, com coberturas como castanhas, chocolate belga ou frutas.",
     price: "R$ 4,99",
@@ -71,7 +70,7 @@ const arrProducts = [
   id="produtos"
   aria-labelledby="products-heading"
   role="region"
-  class="bluePattern bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:overflow-y-hidden lg:gap-[8vh] xl:p-8 border-1 border-b-0"
+  class="bluePattern bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:gap-[8vh] xl:p-8 border-1 border-b-0"
 >
   <h2
     id="products-heading"
@@ -79,12 +78,17 @@ const arrProducts = [
   >
     Doces
   </h2>
-  <div
-    class="flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px]"
+
+  <ul
+    role="list"
+    class="flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px] list-none m-0 p-0"
   >
     {
       arrProducts.map((item) => (
-        <article class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 border-1 lg:max-w-80 mb-2">
+        <li
+          role="listitem"
+          class="flex flex-col gap-4 min-w-80 h-120 bg-[#ffffff] rounded-3xl p-4 border-1 lg:max-w-80 mb-2"
+        >
           <figure class="self-center">
             <Image
               src={item.source}
@@ -93,23 +97,25 @@ const arrProducts = [
               format="avif"
             />
           </figure>
+
           <header>
             <h3 class="font-extrabold font-comfortaa text-xl text-left pl-2 text-[#d94694]">
               {item.title}
             </h3>
           </header>
-          <section>
+
+          <div>
             <p class="font-medium text-left font-nunito pl-2 pr-4 line-clamp-2 text-[#4d4d4d]">
               {item.details}
             </p>
-          </section>
+          </div>
+
           <footer class="flex justify-between items-center pl-4 pr-4 mt-2">
             <p class="font-bold text-[#d94694]">{item.price}</p>
             <a
               href="/menu"
-              class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694] rounded-2xl hover:scale-110"
               aria-label={`Ver detalhes de ${item.title}`}
-              title={`Clique para ver mais sobre ${item.title}`}
+              class="bg-[#ffebf2] border-1 border-[#d94694] text-[#d94694] rounded-2xl hover:scale-110"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -125,20 +131,22 @@ const arrProducts = [
                   clip-rule="evenodd"
                 />
               </svg>
-              <span class="sr-only">Ver detalhes de {item.title}</span>
             </a>
           </footer>
-        </article>
+        </li>
       ))
     }
-  </div>
+  </ul>
+
   <div class="self-center">
     <a
       href="/menu"
       class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
-      aria-label="Acessar o menu completo de produtos">Veja mais</a
     >
+      Veja mais
+    </a>
   </div>
+
   <Promo
     title="Donuts deliciosos esperando por você 😋"
     description="Desconto de 15% em compras de donuts de chocolate!"
@@ -148,20 +156,7 @@ const arrProducts = [
 </section>
 
 <style>
-  /* Adicione esta classe Tailwind customizada para texto visível apenas para leitores de tela */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  section {
+  ul[role="list"] {
     scrollbar-color: #e60073 transparent;
     scrollbar-width: thin;
   }
