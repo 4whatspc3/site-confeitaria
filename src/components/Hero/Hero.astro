@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import navLogo from "../../assets/astro.svg";
+import navLogo from "../../assets/promo-images/kawaii-promo.png";
 import heroImage from "../../assets/hero-images/kawaii.png";
 ---
 
 <header
   id="home"
-  class="pinkPattern bg-cover bg-[#ffebf2] min-h-screen p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh] border-1 border-b-0"
+  class="pinkPattern bg-cover bg-[#ffebf2] h-screen min-h-[874px] max-h-[1100px] p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh] border-1 border-b-0"
 >
   <nav
     class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl border-1 md:bg-transparent md:border-none md:p-0
@@ -16,8 +16,12 @@ import heroImage from "../../assets/hero-images/kawaii.png";
     <div
       class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1"
     >
-      <a href="/" aria-label="Voltar para a página inicial">
-        <Image src={navLogo} alt="Logo da Doce Delícia" class="w-auto h-10" />
+      <a
+        href="/"
+        aria-label="Voltar para a página inicial"
+        class="text-new-pink font-bold text-2xl text-outline"
+      >
+        ✨🦄✨
       </a>
     </div>
     <ul
