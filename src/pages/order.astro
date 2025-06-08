@@ -8,9 +8,11 @@ import Forms from "../components/Forms/Forms.astro";
     id="order"
     aria-labelledby="order-heading"
     role="region"
-    class="min-h-screen w-full p-4 bg-[#e6f7ff] bluePattern bg-cover flex flex-col gap-[10vh] sm:p-8 border-1"
+    class="min-h-screen w-full p-4 bg-[#e6f7ff] relative bg-[url(/hero/newbg.jpg)] bg-cover flex flex-col gap-[10vh] sm:p-8 border-1"
   >
-    <div class="flex gap-2 w-full max-w-[1000px] self-center">
+    <div class="absolute h-full w-full inset-0 bg-morning-glory/80"></div>
+
+    <div class="relative flex gap-2 w-full max-w-[1000px] self-center">
       <div class="h-10 w-10 self-center">
         <a
           href="/menu"
@@ -35,7 +37,7 @@ import Forms from "../components/Forms/Forms.astro";
       <div class="m-auto -translate-x-4 lg:-translate-x-8">
         <h2
           id="order-heading"
-          class="text-5xl text-center text-new-pink font-semibold text-outline lg:text-6xl"
+          class="text-5xl text-center text-new-pink font-bold text-outline lg:text-6xl"
         >
           Conclua <br class="sm:hidden" /> o pedido
         </h2>
@@ -43,7 +45,7 @@ import Forms from "../components/Forms/Forms.astro";
     </div>
 
     <h3
-      class="self-center text-center text-[#333333] font-semibold text-xl sm:w-[400px]"
+      class="relative self-center text-center text-[#333333] font-semibold text-xl sm:w-[400px]"
     >
       Após preencher o formulário, você será redirecionado para o <span
         class="text-emerald-500">WhatsApp</span
@@ -51,7 +53,7 @@ import Forms from "../components/Forms/Forms.astro";
         >confeiteira</span
       > 🤗
     </h3>
-    <div>
+    <div class="relative">
       <Forms />
     </div>
   </section>
