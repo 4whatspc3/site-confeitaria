@@ -6,15 +6,15 @@ import heroImage from "../../assets/hero-images/kawaii.png";
 
 <header
   id="home"
-  class="pinkPattern bg-cover bg-[#ffebf2] h-screen min-h-[874px] max-h-[1100px] p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh] border-1 border-b-0"
+  class="relative bg-[url(/hero/newbg.jpg)] bg-cover bg-[#ffebf2] h-screen min-h-[874px] max-h-[1100px] p-4 flex flex-col overflow-hidden gap-[6vh] md:gap-[10vh] md:p-8 xl:gap-[18vh] border-1 border-b-0"
 >
+  <div class="absolute h-full w-full inset-0 bg-pink-300/80"></div>
   <nav
-    class="flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl border-1 md:bg-transparent md:border-none md:p-0
-           md:w-[700px] md:mx-auto lg:w-[820px] xl:w-[1000px] 2xl:w-[1100px] shake-nav"
+    class="relative flex justify-between items-center bg-morning-glory p-2 pr-6 pl-6 rounded-2xl border-1 sm:bg-transparent sm:border-none sm:p-0 md:w-[700px] md:mx-auto lg:w-[820px] xl:w-[1000px] 2xl:w-[1100px] shake-nav"
     aria-label="Navegação Principal do Site"
   >
     <div
-      class="md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1"
+      class="sm:bg-morning-glory sm:p-3 sm:pr-4 sm:pl-4 sm:rounded-2xl sm:border-1"
     >
       <a
         href="/"
@@ -25,7 +25,7 @@ import heroImage from "../../assets/hero-images/kawaii.png";
       </a>
     </div>
     <ul
-      class="hidden sm:flex text-new-pink font-medium gap-4 md:bg-morning-glory md:p-2 md:pr-4 md:pl-4 md:rounded-2xl md:border-1 md:border-black"
+      class="hidden sm:flex text-new-pink font-medium gap-4 sm:bg-morning-glory sm:p-2 sm:pr-4 sm:pl-4 sm:rounded-2xl sm:border-1 sm:border-black"
     >
       <li
         class="bg-white rounded-2xl p-2 border-1 border-black hover:bg-new-pink hover:text-white transition-colors duration-500 ease-in-out"
@@ -112,21 +112,18 @@ import heroImage from "../../assets/hero-images/kawaii.png";
     </div>
   </nav>
   <section
-    class="flex flex-col gap-[6vh] md:justify-between xl:grid xl:grid-cols-[500px_auto] xl:grid-rows-2 xl:gap-0 xl:mx-auto 2xl:grid-cols-[600px_auto]"
+    class="relative flex flex-col gap-[6vh] md:justify-between xl:grid xl:grid-cols-[500px_auto] xl:grid-rows-2 xl:gap-0 xl:mx-auto 2xl:grid-cols-[600px_auto]"
   >
     <h1
-      class="text-7xl text-new-pink font-bold text-center lg:text-8xl xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2
-             xl:self-center xl:text-left xl:translate-y-4 text-outline"
+      class="text-7xl text-new-pink font-bold text-center lg:text-8xl xl:col-start-1 xl:col-end-2 xl:row-start-1 xl:row-end-2 xl:self-center xl:text-left xl:translate-y-4 text-outline"
     >
-      Doces <span class="text-morning-glory">&</span><br class="md:hidden" /> Doçuras
+      Doces <span class="text-morning-glory">&</span><br class="sm:hidden" /> Doçuras
     </h1>
     <div
-      class="order-2 md:order-0 self-center -translate-y-12 md:flex md:flex-col md:gap-8 md:translate-y-6 lg:gap-10
-            xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 xl:self-start xl:gap-12 xl:translate-y-10"
+      class="self-center md:flex md:flex-col md:gap-10 md:translate-y-6 lg:gap-10 xl:col-start-1 xl:col-end-2 xl:row-start-2 xl:row-end-3 xl:self-start xl:gap-12 xl:translate-y-10"
     >
       <h2
-        class="text-2xl text-new-pink font-bold max-w-[370px] text-center
-        md:text-white addtext-outline md:font-extrabold lg:text-3xl lg:max-w-[420px] xl:text-left"
+        class="text-[26px] text-white font-extrabold translate-y-6 max-w-[370px] text-center text-outline md:translate-y-0 lg:text-3xl lg:max-w-[420px] xl:text-left"
       >
         Delícias e sabores para esquentar o seu coraçãozinho
       </h2>
@@ -139,8 +136,7 @@ import heroImage from "../../assets/hero-images/kawaii.png";
       </div>
     </div>
     <div
-      class="order-1 self-center w-100 h-100 md:order-0 md:ml-0 md:-translate-x-2
-            xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-3 xl:justify-self-center xl:w-130 xl:h-130"
+      class="self-center w-100 h-100 md:ml-0 md:-translate-x-2 xl:col-start-2 xl:col-end-3 xl:row-start-1 xl:row-end-3 xl:justify-self-center xl:w-130 xl:h-130"
     >
       <Image
         src={heroImage}
