@@ -34,18 +34,22 @@ const arrFAQ = [
   id="FAQ"
   aria-labelledby="faq-heading"
   role="region"
-  class="min-h-screen flex flex-col gap-[8vh] p-4 pt-8 sm:p-8 bg-[#f7f7f7] pinkPattern bg-cover bg-center border-1 border-t-0"
+  class="min-h-screen flex flex-col gap-[8vh] p-4 pt-8 sm:p-8 bg-[#f7f7f7] relative bg-[url(/hero/newbg.jpg)] bg-cover bg-center border-1 border-t-0"
 >
+  <div class="absolute h-full w-full inset-0 bg-pink-300/80"></div>
+
   <h2
     id="faq-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
+    class="relative text-5xl text-center text-new-pink font-bold lg:text-6xl text-outline"
   >
     FAQ
   </h2>
-  <p class="text-center text-white font-extrabold text-outline text-3xl">
+  <p
+    class="relative text-center text-white font-extrabold text-outline text-3xl"
+  >
     Questões mais frequentes
   </p>
-  <div class="flex flex-col gap-[4vh]">
+  <div class="relative flex flex-col gap-[4vh]">
     {
       arrFAQ.map((item) => (
         <details class="w-full bg-morning-glory rounded-2xl border-1 md:max-w-[720px] md:self-center overflow-hidden">
