@@ -70,18 +70,20 @@ const arrProducts = [
   id="produtos"
   aria-labelledby="products-heading"
   role="region"
-  class="bluePattern bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:gap-[8vh] xl:p-8 border-1 border-b-0"
+  class="relative bg-[url(/hero/newbg.jpg)] bg-cover min-h-screen overflow-x-hidden flex flex-col gap-[12vh] p-8 pl-1 pr-0 bg-[#e6f7ff] lg:gap-[8vh] xl:p-8 border-1 border-b-0"
 >
+  <div class="absolute h-full w-full inset-0 bg-morning-glory/80"></div>
+
   <h2
     id="products-heading"
-    class="text-5xl text-center text-new-pink font-semibold lg:text-6xl text-outline"
+    class="relative text-5xl text-center text-new-pink font-bold lg:text-6xl text-outline"
   >
     Doces
   </h2>
 
   <ul
     role="list"
-    class="flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px] list-none m-0 p-0"
+    class="relative flex overflow-x-auto gap-4 p-2 lg:overflow-hidden lg:grid lg:grid-rows-2 lg:grid-cols-3 md:max-w-[1024px] lg:self-center xl:gap-x-12 xl:gap-y-12 2xl:gap-x-14 2xl:gap-y-14 2xl:max-w-[1280px] list-none m-0 p-0"
   >
     {
       arrProducts.map((item) => (
@@ -138,7 +140,7 @@ const arrProducts = [
     }
   </ul>
 
-  <div class="self-center">
+  <div class="relative self-center">
     <a
       href="/menu"
       class="font-bold font-nunito bg-new-pink text-[#ffffff] border-2 border-white p-4 rounded-3xl shadow-sm shake-anchor hover:bg-pink-400 hover:scale-102"
