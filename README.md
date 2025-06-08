@@ -60,7 +60,7 @@ Se você deseja explorar o código e entender como o projeto funciona, siga os p
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/4whatspc3/advogada-landing-page.git](https://github.com/4whatspc3/advogada-landing-page.git)
+    git clone https://github.com/4whatspc3/site-confeitaria.git
     ```
 
 2.  **Navegue até o diretório do projeto:**
