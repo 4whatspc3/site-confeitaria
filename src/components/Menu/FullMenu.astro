@@ -319,15 +319,9 @@ const arrEspeciaisDaCasa = [
 
     if (produtoExistente) {
       produtoExistente.quantidade++;
-      console.log(
-        `Incrementando quantidade de ${titulo} para ${produtoExistente.quantidade}`
-      );
-      console.log(cart);
     } else {
       const novoProduto = { id, titulo, preco, quantidade: 1 };
       cart.push(novoProduto);
-      console.log(`Produto adicionado: ${titulo}`);
-      console.log(cart);
     }
   }
 
@@ -340,12 +334,8 @@ const arrEspeciaisDaCasa = [
     if (index > -1) {
       if (cart[index].quantidade > 1) {
         cart[index].quantidade--;
-        console.log(
-          `Decrementando quantidade de ${titulo} para ${cart[index].quantidade}`
-        );
       } else {
         cart.splice(index, 1);
-        console.log(`Produto removido: ${titulo}`);
       }
     } else {
       console.log(`Produto ${titulo} não encontrado no carrinho.`);
