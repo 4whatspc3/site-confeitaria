@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /form-success
 Disallow: /api/whatsapp
 Disallow: /order
+
+Sitemap: https://doces-mary.pages.dev/sitemap.xml
